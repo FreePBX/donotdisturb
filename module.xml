@@ -4,7 +4,7 @@
 	<version>1.0.1</version>
 	<type>setup</type>
 	<category>Call Management</category>
-	<location>release/donotdisturb-1.0.tgz</location>
+	<location>release/donotdisturb-1.0.1.tgz</location>
 	<info>http://freepbx.org/wiki/DND</info>
-	<md5sum>d8a7506184ee8416f81ee9a252eb7065</md5sum>
+	<md5sum>c596f8840be8cfa341bb0c6c885236ff</md5sum>
 </module>
