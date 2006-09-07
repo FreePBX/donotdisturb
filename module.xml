@@ -4,7 +4,7 @@
 	<version>1.0.1</version>
 	<type>setup</type>
 	<category>Call Management</category>
-	<location>release/donotdisturb-1.0.1.tgz</location>
+	<location>release//2.2/donotdisturb-1.0.1.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-Features</info>
-	<md5sum>f2f87161fc0ac2fde9048543c3fd4fd0</md5sum>
+	<md5sum>5c1128b0a2c38b0d8aaff289fa5cb1d4</md5sum>
 </module>
