@@ -3,7 +3,7 @@
 	<name>Do-Not-Disturb (DND)</name>
 	<version>1.0.1</version>
 	<type>setup</type>
-	<category>Call Management</category>
+	<category>Provides a Feature Code</category>
 	<location>release//2.2/donotdisturb-1.0.1.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-Features</info>
 	<md5sum>5c1128b0a2c38b0d8aaff289fa5cb1d4</md5sum>
