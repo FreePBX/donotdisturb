@@ -1,7 +1,11 @@
 <module>
 	<rawname>donotdisturb</rawname>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
+	<changelog>
+		*1.0.2* changed ${CALLERID(number)} to ${AMPUSER} to accomodate CID number masquerading
+		*1.0.1* First release for 2.2
+	</changelog>
 	<type>setup</type>
 	<category>Provides a Feature Code</category>
 	<location>release//2.2/donotdisturb-1.0.1.tgz</location>
