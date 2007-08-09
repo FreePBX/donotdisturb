@@ -1,14 +1,14 @@
 <module>
 	<rawname>donotdisturb</rawname>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>1.0.2</version>
+	<version>1.0.2.1</version>
 	<changelog>
+		*1.0.2.1* bump for rc1
 		*1.0.2* changed ${CALLERID(number)} to ${AMPUSER} to accomodate CID number masquerading
 		*1.0.1* First release for 2.2
 	</changelog>
 	<type>setup</type>
 	<category>Provides a Feature Code</category>
 	<location>release/2.3/donotdisturb-1.0.2.tgz</location>
-	<info>http://aussievoip.com.au/wiki/freePBX-Features</info>
 	<md5sum>bf93875a8a72bc859da370d8b677ed00</md5sum>
 </module>
