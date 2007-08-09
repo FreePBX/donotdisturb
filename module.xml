@@ -9,6 +9,6 @@
 	</changelog>
 	<type>setup</type>
 	<category>Provides a Feature Code</category>
-	<location>release/2.3/donotdisturb-1.0.2.tgz</location>
-	<md5sum>bf93875a8a72bc859da370d8b677ed00</md5sum>
+	<location>release/2.3/donotdisturb-1.0.2.1.tgz</location>
+	<md5sum>480cd7593b131c61a96147b7fa7cda59</md5sum>
 </module>
