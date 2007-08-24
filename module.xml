@@ -1,14 +1,15 @@
 <module>
 	<rawname>donotdisturb</rawname>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>1.0.2.1</version>
+	<version>1.0.2.2</version>
 	<changelog>
+		*1.0.2.2* changed category
 		*1.0.2.1* bump for rc1
 		*1.0.2* changed ${CALLERID(number)} to ${AMPUSER} to accomodate CID number masquerading
 		*1.0.1* First release for 2.2
 	</changelog>
 	<type>setup</type>
-	<category>Provides a Feature Code</category>
-	<location>release/2.3/donotdisturb-1.0.2.1.tgz</location>
-	<md5sum>480cd7593b131c61a96147b7fa7cda59</md5sum>
+	<category>Internal Options &amp; Configuration</category>
+	<location>release/2.3/donotdisturb-1.0.2.2.tgz</location>
+	<md5sum>e240b22e028592f65f8269d9595563da</md5sum>
 </module>
