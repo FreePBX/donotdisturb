@@ -1,8 +1,9 @@
 <module>
 	<rawname>donotdisturb</rawname>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>1.0.2.2</version>
+	<version>2.4.0</version>
 	<changelog>
+		*2.4.0* bunp for 2.4
 		*1.0.2.2* changed category
 		*1.0.2.1* bump for rc1
 		*1.0.2* changed ${CALLERID(number)} to ${AMPUSER} to accomodate CID number masquerading
@@ -10,6 +11,6 @@
 	</changelog>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
-	<location>release/2.3/donotdisturb-1.0.2.2.tgz</location>
-	<md5sum>e240b22e028592f65f8269d9595563da</md5sum>
+	<location>release/2.4/donotdisturb-2.4.0.tgz</location>
+	<md5sum>036a53cec0102dac65da17f1d03db9ca</md5sum>
 </module>
