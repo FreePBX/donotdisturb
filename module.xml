@@ -12,6 +12,6 @@
 	</changelog>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
-	<location>release/2.4/donotdisturb-2.4.0.tgz</location>
-	<md5sum>036a53cec0102dac65da17f1d03db9ca</md5sum>
+	<location>release/2.5/donotdisturb-2.5.0.tgz</location>
+	<md5sum>80e0800301b8f248bae4bde5fc6e8b5c</md5sum>
 </module>
