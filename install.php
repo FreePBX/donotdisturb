@@ -14,4 +14,11 @@ $fcc->setDefault('*79');
 $fcc->update();
 unset($fcc);	
 
+// Register FeatureCode - Activate
+$fcc = new featurecode('donotdisturb', 'dnd_toggle');
+$fcc->setDescription('DND Toggle');
+$fcc->setDefault('*0078');
+$fcc->update();
+unset($fcc);
+
 ?>
