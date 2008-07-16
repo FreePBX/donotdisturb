@@ -5,6 +5,8 @@ function donotdisturb_get_config($engine) {
 	
 	// This generates the dialplan
 	global $ext;  
+	global $amp_conf;
+
 	switch($engine) {
 		case "asterisk":
 
@@ -31,6 +33,23 @@ function donotdisturb_get_config($engine) {
 					}	
 				}
 			}
+
+			$fcc = new featurecode($modulename, 'dnd_toggle');
+			$dnd_code = $fcc->getCodeActive();
+			unset($fcc);
+
+			// Create hints context for DND codes so a device can subscribe to the DND state
+			//
+			if ($amp_conf['USEDEVSTATE'] && $dnd_code != '') {
+				$ext->addInclude('from-internal-additional','ext-dnd-hints');
+				$contextname = 'ext-dnd-hints';
+				$device_list = core_devices_list("all", false, true);
+				foreach ($device_list as $device) {
+					$ext->add($contextname, $dnd_code.$device['id'], '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
+					$ext->addHint($contextname, $dnd_code.$device['id'], "Custom:DEVDND".$device['id']);
+				}
+			}
+
 		break;
 	}
 }
@@ -48,10 +67,23 @@ function donotdisturb_dnd_on($c) {
 	$ext->add($id, $c, '', new ext_macro('user-callerid')); // $cmd,n,Macro(user-callerid)
 	$ext->add($id, $c, '', new ext_setvar('DB(DND/${AMPUSER})', 'YES')); // $cmd,n,Set(...=YES)
 	if ($amp_conf['USEDEVSTATE']) {
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', 'BUSY')); // $cmd,n,Set(...=YES)
+		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&activated')); // $cmd,n,Playback(...)
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
+	if ($amp_conf['USEDEVSTATE']) {
+		$c = 'sstate';
+		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', '${STATE}'));
+		$ext->add($id, $c, '', new ext_dbget('DEVICES','AMPUSER/${AMPUSER}/device'));
+		$ext->add($id, $c, '', new ext_gotoif('$["${DEVICES}" = "" ]', 'return'));
+		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(DEVICES,&)}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
+		$ext->add($id, $c, 'begin', new ext_setvar('DEVSTATE(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '$[${ITER} + 1]'));
+		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin'));
+		$ext->add($id, $c, 'return', new ext_return());
+	}
 }
 		
 function donotdisturb_dnd_off($c) {
@@ -67,10 +99,23 @@ function donotdisturb_dnd_off($c) {
 	$ext->add($id, $c, '', new ext_macro('user-callerid')); // $cmd,n,Macro(user-callerid)
 	$ext->add($id, $c, '', new ext_dbdel('DND/${AMPUSER}')); // $cmd,n,DBdel(..)
 	if ($amp_conf['USEDEVSTATE']) {
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', 'NOT_INUSE')); // $cmd,n,Set(...=YES)
+		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated')); // $cmd,n,Playback(...)
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
+	if ($amp_conf['USEDEVSTATE']) {
+		$c = 'sstate';
+		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', '${STATE}'));
+		$ext->add($id, $c, '', new ext_dbget('DEVICES','AMPUSER/${AMPUSER}/device'));
+		$ext->add($id, $c, '', new ext_gotoif('$["${DEVICES}" = "" ]', 'return'));
+		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(DEVICES,&)}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
+		$ext->add($id, $c, 'begin', new ext_setvar('DEVSTATE(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '$[${ITER} + 1]'));
+		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin'));
+		$ext->add($id, $c, 'return', new ext_return());
+	}
 }
 
 function donotdisturb_dnd_toggle($c) {
@@ -88,17 +133,32 @@ function donotdisturb_dnd_toggle($c) {
 
 	$ext->add($id, $c, 'activate', new ext_setvar('DB(DND/${AMPUSER})', 'YES'));
 	if ($amp_conf['USEDEVSTATE']) {
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', 'BUSY'));
+		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&activated'));
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
 
 	$ext->add($id, $c, 'deactivate', new ext_dbdel('DND/${AMPUSER}'));
 	if ($amp_conf['USEDEVSTATE']) {
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', 'NOT_INUSE'));
+		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
+		//$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', 'NOT_INUSE'));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated'));
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
+	if ($amp_conf['USEDEVSTATE']) {
+		$c = 'sstate';
+		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', '${STATE}'));
+		$ext->add($id, $c, '', new ext_dbget('DEVICES','AMPUSER/${AMPUSER}/device'));
+		$ext->add($id, $c, '', new ext_gotoif('$["${DEVICES}" = "" ]', 'return'));
+		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(DEVICES,&)}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
+		$ext->add($id, $c, 'begin', new ext_setvar('DEVSTATE(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '$[${ITER} + 1]'));
+		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin'));
+		$ext->add($id, $c, 'return', new ext_return());
+	}
 }
 
 ?>
