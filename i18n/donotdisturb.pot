@@ -29,5 +29,5 @@ msgid "DND Toggle"
 msgstr ""
 
 #: module.xml
-msgid "Do-Not-Disturb (DND"
+msgid "Do-Not-Disturb (DND)"
 msgstr ""
