@@ -57,6 +57,9 @@ function donotdisturb_get_config($engine) {
 function donotdisturb_dnd_on($c) {
 	global $ext;
 	global $amp_conf;
+	global $version;
+
+	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
 
 	$id = "app-dnd-on"; // The context to be included
 
@@ -74,12 +77,12 @@ function donotdisturb_dnd_on($c) {
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
 	if ($amp_conf['USEDEVSTATE']) {
 		$c = 'sstate';
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', '${STATE}'));
+		$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DND${AMPUSER})', '${STATE}'));
 		$ext->add($id, $c, '', new ext_dbget('DEVICES','AMPUSER/${AMPUSER}/device'));
 		$ext->add($id, $c, '', new ext_gotoif('$["${DEVICES}" = "" ]', 'return'));
 		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(DEVICES,&)}'));
 		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
-		$ext->add($id, $c, 'begin', new ext_setvar('DEVSTATE(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
+		$ext->add($id, $c, 'begin', new ext_setvar($DEVSTATE.'(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
 		$ext->add($id, $c, '', new ext_setvar('ITER', '$[${ITER} + 1]'));
 		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin'));
 		$ext->add($id, $c, 'return', new ext_return());
@@ -89,6 +92,9 @@ function donotdisturb_dnd_on($c) {
 function donotdisturb_dnd_off($c) {
 	global $ext;
 	global $amp_conf;
+	global $version;
+
+	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
 
 	$id = "app-dnd-off"; // The context to be included
 
@@ -106,12 +112,12 @@ function donotdisturb_dnd_off($c) {
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
 	if ($amp_conf['USEDEVSTATE']) {
 		$c = 'sstate';
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', '${STATE}'));
+		$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DND${AMPUSER})', '${STATE}'));
 		$ext->add($id, $c, '', new ext_dbget('DEVICES','AMPUSER/${AMPUSER}/device'));
 		$ext->add($id, $c, '', new ext_gotoif('$["${DEVICES}" = "" ]', 'return'));
 		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(DEVICES,&)}'));
 		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
-		$ext->add($id, $c, 'begin', new ext_setvar('DEVSTATE(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
+		$ext->add($id, $c, 'begin', new ext_setvar($DEVSTATE.'(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
 		$ext->add($id, $c, '', new ext_setvar('ITER', '$[${ITER} + 1]'));
 		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin'));
 		$ext->add($id, $c, 'return', new ext_return());
@@ -121,6 +127,9 @@ function donotdisturb_dnd_off($c) {
 function donotdisturb_dnd_toggle($c) {
 	global $ext;
 	global $amp_conf;
+	global $version;
+
+	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
 
 	$id = "app-dnd-toggle"; // The context to be included
 	$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
@@ -143,18 +152,17 @@ function donotdisturb_dnd_toggle($c) {
 	if ($amp_conf['USEDEVSTATE']) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
-		//$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', 'NOT_INUSE'));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated'));
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
 	if ($amp_conf['USEDEVSTATE']) {
 		$c = 'sstate';
-		$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DND${AMPUSER})', '${STATE}'));
+		$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DND${AMPUSER})', '${STATE}'));
 		$ext->add($id, $c, '', new ext_dbget('DEVICES','AMPUSER/${AMPUSER}/device'));
 		$ext->add($id, $c, '', new ext_gotoif('$["${DEVICES}" = "" ]', 'return'));
 		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(DEVICES,&)}'));
 		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
-		$ext->add($id, $c, 'begin', new ext_setvar('DEVSTATE(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
+		$ext->add($id, $c, 'begin', new ext_setvar($DEVSTATE.'(Custom:DEVDND${CUT(DEVICES,&,${ITER})})','${STATE}'));
 		$ext->add($id, $c, '', new ext_setvar('ITER', '$[${ITER} + 1]'));
 		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin'));
 		$ext->add($id, $c, 'return', new ext_return());
