@@ -1,8 +1,9 @@
 <module>
 	<rawname>donotdisturb</rawname>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>2.5.0.3</version>
+	<version>2.5.0.4</version>
 	<changelog>
+		*2.5.0.4* #3215, localization fixes
 		*2.5.0.3* localization, xml description, Swedish
 		*2.5.0.2* #2969 change default value to *76
 		*2.5.0.1* #2909 Add DND hints
@@ -16,6 +17,6 @@
 	<description>Provides donotdisturb featurecodes</description>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
-	<location>release/2.5/donotdisturb-2.5.0.3.tgz</location>
-	<md5sum>bd130f75d608465dedd833d9ea3bea11</md5sum>
+	<location>release/2.5/donotdisturb-2.5.0.4.tgz</location>
+	<md5sum>2bcb1b93be30f08b5ffd28480878f214</md5sum>
 </module>
