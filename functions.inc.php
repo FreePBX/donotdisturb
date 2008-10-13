@@ -71,7 +71,7 @@ function donotdisturb_dnd_on($c) {
 	$ext->add($id, $c, '', new ext_setvar('DB(DND/${AMPUSER})', 'YES')); // $cmd,n,Set(...=YES)
 	if ($amp_conf['USEDEVSTATE']) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
-		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&activated')); // $cmd,n,Playback(...)
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
@@ -106,7 +106,7 @@ function donotdisturb_dnd_off($c) {
 	$ext->add($id, $c, '', new ext_dbdel('DND/${AMPUSER}')); // $cmd,n,DBdel(..)
 	if ($amp_conf['USEDEVSTATE']) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
-		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated')); // $cmd,n,Playback(...)
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
@@ -143,7 +143,7 @@ function donotdisturb_dnd_toggle($c) {
 	$ext->add($id, $c, 'activate', new ext_setvar('DB(DND/${AMPUSER})', 'YES'));
 	if ($amp_conf['USEDEVSTATE']) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
-		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&activated'));
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
@@ -151,7 +151,7 @@ function donotdisturb_dnd_toggle($c) {
 	$ext->add($id, $c, 'deactivate', new ext_dbdel('DND/${AMPUSER}'));
 	if ($amp_conf['USEDEVSTATE']) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
-		$ext->add($id, $c, '', new ext_gosub('1', 'sstate'));
+		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
 	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated'));
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
