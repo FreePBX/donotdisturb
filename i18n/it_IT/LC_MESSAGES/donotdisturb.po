@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-17 11:14+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+
+#: install.php:4
+msgid "DND Activate"
+msgstr "Attiva Non-Disturbare (DND)"
+
+#: install.php:12
+msgid "DND Deactivate"
+msgstr "Disattiva Non-Disturbare (DND)"
+
+#: install.php:20
+msgid "DND Toggle"
+msgstr "Attiva/Disattiva DND"
+
+#: module.xml
+msgid "Do-Not-Disturb (DND)"
+msgstr "Non-Disturbare (DND)"
+
