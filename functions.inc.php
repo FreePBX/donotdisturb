@@ -73,7 +73,11 @@ function donotdisturb_dnd_on($c) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
-	$ext->add($id, $c, '', new ext_playback('do-not-disturb&activated')); // $cmd,n,Playback(...)
+	if ($amp_conf['FCBEEPONLY']) {
+		$ext->add($id, $c, 'hook_1', new ext_playback('beep')); // $cmd,n,Playback(...)
+	} else {
+		$ext->add($id, $c, 'hook_1', new ext_playback('do-not-disturb&activated')); // $cmd,n,Playback(...)
+	}
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
 	if ($amp_conf['USEDEVSTATE']) {
 		$c = 'sstate';
@@ -108,7 +112,11 @@ function donotdisturb_dnd_off($c) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
-	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated')); // $cmd,n,Playback(...)
+	if ($amp_conf['FCBEEPONLY']) {
+		$ext->add($id, $c, 'hook_1', new ext_playback('beep')); // $cmd,n,Playback(...)
+	} else {
+		$ext->add($id, $c, 'hook_1', new ext_playback('do-not-disturb&de-activated')); // $cmd,n,Playback(...)
+	}
 	$ext->add($id, $c, '', new ext_macro('hangupcall')); // $cmd,n,Macro(user-callerid)
 	if ($amp_conf['USEDEVSTATE']) {
 		$c = 'sstate';
@@ -145,7 +153,11 @@ function donotdisturb_dnd_toggle($c) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
-	$ext->add($id, $c, '', new ext_playback('do-not-disturb&activated'));
+	if ($amp_conf['FCBEEPONLY']) {
+		$ext->add($id, $c, 'hook_on', new ext_playback('beep')); // $cmd,n,Playback(...)
+	} else {
+		$ext->add($id, $c, 'hook_on', new ext_playback('do-not-disturb&activated'));
+	}
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
 
 	$ext->add($id, $c, 'deactivate', new ext_dbdel('DND/${AMPUSER}'));
@@ -153,7 +165,11 @@ function donotdisturb_dnd_toggle($c) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
-	$ext->add($id, $c, '', new ext_playback('do-not-disturb&de-activated'));
+	if ($amp_conf['FCBEEPONLY']) {
+		$ext->add($id, $c, 'hook_off', new ext_playback('beep')); // $cmd,n,Playback(...)
+	} else {
+		$ext->add($id, $c, 'hook_off', new ext_playback('do-not-disturb&de-activated'));
+	}
 	$ext->add($id, $c, '', new ext_macro('hangupcall'));
 	if ($amp_conf['USEDEVSTATE']) {
 		$c = 'sstate';
