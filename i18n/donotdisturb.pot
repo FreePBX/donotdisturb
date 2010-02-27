@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,29 +28,23 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: donotdisturb/donotdisturb.i18n.php:5 donotdisturb/install.php:4
 msgid "Do-Not-Disturb (DND)"
 msgstr ""
 
-#: donotdisturb/donotdisturb.i18n.php:7
 msgid ""
 "Internal Options \n"
 "&\n"
 " Configuration"
 msgstr ""
 
-#: donotdisturb/donotdisturb.i18n.php:11
 msgid "Provides donotdisturb featurecodes"
 msgstr ""
 
-#: donotdisturb/install.php:5
 msgid "DND Activate"
 msgstr ""
 
-#: donotdisturb/install.php:6
 msgid "DND Deactivate"
 msgstr ""
 
-#: donotdisturb/install.php:7
 msgid "DND Toggle"
 msgstr ""
