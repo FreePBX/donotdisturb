@@ -43,10 +43,12 @@ function donotdisturb_get_config($engine) {
 			if ($amp_conf['USEDEVSTATE'] && $dnd_code != '') {
 				$ext->addInclude('from-internal-additional','ext-dnd-hints');
 				$contextname = 'ext-dnd-hints';
-				$device_list = core_devices_list("all", false, true);
+				$device_list = core_devices_list("all", 'full', true);
 				foreach ($device_list as $device) {
-					$ext->add($contextname, $dnd_code.$device['id'], '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
-					$ext->addHint($contextname, $dnd_code.$device['id'], "Custom:DEVDND".$device['id']);
+          if ($device['tech'] == 'sip' || $device['tech'] == 'iax2') {
+					  $ext->add($contextname, $dnd_code.$device['id'], '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
+					  $ext->addHint($contextname, $dnd_code.$device['id'], "Custom:DEVDND".$device['id']);
+          }
 				}
 			}
 
