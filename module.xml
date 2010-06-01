@@ -1,10 +1,11 @@
 <module>
 	<rawname>donotdisturb</rawname>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>2.7.0.0</version>
+	<version>2.7.0.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		*2.7.0.1* #4294
 		*2.7.0.0* localizations
 	  *2.6.0.1* Added publisher/lic
 		*2.6.0.0* #3650, #3651
@@ -23,6 +24,6 @@
 	<description>Provides donotdisturb featurecodes</description>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
-	<location>release/2.7/donotdisturb-2.7.0.0.tgz</location>
-	<md5sum>796751b59b61d4ef4267808e4e2b1bc0</md5sum>
+	<location>release/2.8/donotdisturb-2.7.0.1.tgz</location>
+	<md5sum>9515658bf86bbaaffa080420c9e9c52b</md5sum>
 </module>
