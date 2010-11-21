@@ -5,20 +5,7 @@
 // from a function...?
 global $astman;
 
-// Register FeatureCode - Activate
-$fcc = new featurecode('donotdisturb', 'dnd_on');
-$fcc->delete();
-unset($fcc);
-
-// Register FeatureCode - Deactivate
-$fcc = new featurecode('donotdisturb', 'dnd_off');
-$fcc->delete();
-unset($fcc);	
-
-// Register FeatureCode - Activate
-$fcc = new featurecode('donotdisturb', 'dnd_toggle');
-$fcc->delete();
-unset($fcc);
+// Don't bother uninstalling feature codes, now module_uninstall does it
 
 // remove all D-N-D options in effect on extensions
 if ($astman) {
