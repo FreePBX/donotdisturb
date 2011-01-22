@@ -61,7 +61,7 @@ function donotdisturb_dnd_on($c) {
 	global $amp_conf;
 	global $version;
 
-	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
+	$DEVSTATE = $amp_conf['AST_FUNC_DEVICE_STATE'];
 
 	$id = "app-dnd-on"; // The context to be included
 
@@ -100,7 +100,7 @@ function donotdisturb_dnd_off($c) {
 	global $amp_conf;
 	global $version;
 
-	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
+	$DEVSTATE = $amp_conf['AST_FUNC_DEVICE_STATE'];
 
 	$id = "app-dnd-off"; // The context to be included
 
@@ -139,7 +139,7 @@ function donotdisturb_dnd_toggle($c) {
 	global $amp_conf;
 	global $version;
 
-	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
+	$DEVSTATE = $amp_conf['AST_FUNC_DEVICE_STATE'];
 
 	$id = "app-dnd-toggle"; // The context to be included
 	$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
