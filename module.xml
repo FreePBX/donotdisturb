@@ -8,25 +8,9 @@
 	<changelog>
 		*2.9.0.1* #4758
 		*2.9.0.0* #4651
-		*2.7.0.1* #4294
-		*2.7.0.0* localizations
-		*2.6.0.1* Added publisher/lic
-		*2.6.0.0* #3650, #3651
-		*2.5.0.5* #3274
-		*2.5.0.4* #3215, localization fixes
-		*2.5.0.3* localization, xml description, Swedish
-		*2.5.0.2* #2969 change default value to *76
-		*2.5.0.1* #2909 Add DND hints
-		*2.5.0* added toggle and support for func_devstate
-		*2.4.0* bunp for 2.4
-		*1.0.2.2* changed category
-		*1.0.2.1* bump for rc1
-		*1.0.2* changed ${CALLERID(number)} to ${AMPUSER} to accomodate CID number masquerading
-		*1.0.1* First release for 2.2
 	</changelog>
 	<description>Provides donotdisturb featurecodes</description>
-	<type>setup</type>
-	<category>Internal Options &amp; Configuration</category>
+	<category>Call Flow</category>
 	<location>release/2.9/donotdisturb-2.9.0.1.tgz</location>
 	<md5sum>c81e20220a0b69bc53612f1539433755</md5sum>
 </module>
