@@ -10,7 +10,7 @@
 		*2.9.0.0* #4651
 	</changelog>
 	<description>Provides donotdisturb featurecodes</description>
-	<category>Call Flow</category>
+	<category>Applications</category>
 	<location>release/2.9/donotdisturb-2.9.0.1.tgz</location>
 	<md5sum>c81e20220a0b69bc53612f1539433755</md5sum>
 </module>
