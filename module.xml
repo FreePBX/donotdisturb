@@ -2,15 +2,16 @@
 	<rawname>donotdisturb</rawname>
 	<repo>standard</repo>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>2.9.0.1</version>
+	<version>2.10.0.0</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		*2.10.0.0* new version changes
 		*2.9.0.1* #4758
 		*2.9.0.0* #4651
 	</changelog>
 	<description>Provides donotdisturb featurecodes</description>
 	<category>Applications</category>
-	<location>release/2.9/donotdisturb-2.9.0.1.tgz</location>
-	<md5sum>c81e20220a0b69bc53612f1539433755</md5sum>
+	<location>release/2.10/donotdisturb-2.10.0.0.tgz</location>
+	<md5sum>4151007d8d8f386c971e2978f0a7c072</md5sum>
 </module>
