@@ -1,4 +1,5 @@
 <?php
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 // TODO, is this needed...?
 // is this global...? what if we include this files

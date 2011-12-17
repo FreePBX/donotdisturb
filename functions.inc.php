@@ -1,4 +1,5 @@
 <?php
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 function donotdisturb_get_config($engine) {
 	$modulename = 'donotdisturb';
