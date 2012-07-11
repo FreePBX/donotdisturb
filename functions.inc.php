@@ -188,4 +188,50 @@ function donotdisturb_dnd_toggle($c) {
 	}
 }
 
+function donotdisturb_set($extension, $state = '') {
+	global $amp_conf, $astman;
+
+	if ($state != "") {
+        	$r = $astman->database_put('DND', $extension, $state_value);
+                $value_opt = 'BUSY';
+        } else {
+                $astman->database_del('DND', $extension);
+                $value_opt = 'NOT_INUSE';
+        }
+        
+	// This is a kludge but ... check if the is DND and if so do additional processing
+        //
+	if ($amp_conf['USEDEVSTATE']) {
+        	$version = $amp_conf['ASTVERSION'];
+                if (version_compare($version, "1.6", "ge")) {
+                	$DEVSTATE = "DEVICE_STATE";
+                } else {
+                        $DEVSTATE = "DEVSTATE";
+                }
+
+                $devices = $astman->database_get("AMPUSER", $extension . "/device");
+
+                $device_arr = explode('&', $devices);
+                foreach ($device_arr as $device) {
+                	$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DEVDND$device)", $value_opt);
+                }
+                // And also handle the state associated with the user
+                $ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extensions)", $value_opt);
+        }
+	return true;
+}
+
+function donotdisturb_get($extension = '') {
+	global $astman;
+	                
+        $result = false;
+        if ($extension) {
+		$result = $astman->database_get("DND", $extension);
+	} else {
+		$result = $astman->database_show("DND"); 
+	}	
+
+	return $result;
+}
+
 ?>
