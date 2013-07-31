@@ -14,6 +14,6 @@
 	</changelog>
 	<description>Provides donotdisturb featurecodes</description>
 	<category>Applications</category>
-	<location>release/2.11/donotdisturb-2.10.0.1.tgz</location>
-	<md5sum>a54524448fbfd6adbaa24800885f7080</md5sum>
+	<location>release/2.11/donotdisturb-2.11.0.0.tgz</location>
+	<md5sum>7d2913f77f08f6fdbede2a08629d0a13</md5sum>
 </module>
