@@ -192,7 +192,7 @@ function donotdisturb_set($extension, $state = '') {
 	global $amp_conf, $astman;
 
 	if ($state != "") {
-        	$r = $astman->database_put('DND', $extension, $state_value);
+        	$r = $astman->database_put('DND', $extension, $state);
                 $value_opt = 'BUSY';
         } else {
                 $astman->database_del('DND', $extension);
