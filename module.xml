@@ -16,4 +16,4 @@
 	<category>Applications</category>
 	<location>release/2.11/donotdisturb-2.11.0.0.tgz</location>
 	<md5sum>7d2913f77f08f6fdbede2a08629d0a13</md5sum>
-</module>
+<supported><version>2.11</version></supported></module>
