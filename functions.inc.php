@@ -216,7 +216,7 @@ function donotdisturb_set($extension, $state = '') {
                 	$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DEVDND$device)", $value_opt);
                 }
                 // And also handle the state associated with the user
-                $ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extensions)", $value_opt);
+                $ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extension)", $value_opt);
         }
 	return true;
 }
