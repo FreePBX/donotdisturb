@@ -1,6 +1,8 @@
 <?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
-
+//	License for all code of this FreePBX module can be found in the license file inside the module directory
+//	Copyright 2013 Schmooze Com Inc.
+//
 function donotdisturb_get_config($engine) {
 	$modulename = 'donotdisturb';
 	
@@ -216,7 +218,7 @@ function donotdisturb_set($extension, $state = '') {
                 	$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DEVDND$device)", $value_opt);
                 }
                 // And also handle the state associated with the user
-                $ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extensions)", $value_opt);
+                $ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extension)", $value_opt);
         }
 	return true;
 }
