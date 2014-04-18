@@ -2,10 +2,13 @@
 	<rawname>donotdisturb</rawname>
 	<repo>standard</repo>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>2.11.0.1</version>
-	<publisher>FreePBX</publisher>
-	<license>GPLv2+</license>
+	<version>2.11.0.3</version>
+	<publisher>Schmooze Com Inc</publisher>
+	<license>GPLv3+</license>
+	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*2.11.0.3* Include license file
+		*2.11.0.2* Fix typo that was causing incorrect devstate to be set.
 		*2.11.0.1* #6857 related
 		*2.11.0.0* bump version
 		*2.10.0.1* #5478 
