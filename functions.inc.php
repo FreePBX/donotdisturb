@@ -5,9 +5,9 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //
 function donotdisturb_get_config($engine) {
 	$modulename = 'donotdisturb';
-	
+
 	// This generates the dialplan
-	global $ext;  
+	global $ext;
 	global $amp_conf;
 
 	switch($engine) {
@@ -27,13 +27,13 @@ function donotdisturb_get_config($engine) {
 						$fcc = new featurecode($modulename, $featurename);
 						$fc = $fcc->getCodeActive();
 						unset($fcc);
-						
+
 						if ($fc != '')
 							$fname($fc);
 					} else {
 						$ext->add('from-internal-additional', 'debug', '', new ext_noop($modulename.": No func $fname"));
 						var_dump($item);
-					}	
+					}
 				}
 			}
 
@@ -48,10 +48,10 @@ function donotdisturb_get_config($engine) {
 				$contextname = 'ext-dnd-hints';
 				$device_list = core_devices_list("all", 'full', true);
 				foreach ($device_list as $device) {
-          if ($device['tech'] == 'sip' || $device['tech'] == 'iax2') {
-					  $ext->add($contextname, $dnd_code.$device['id'], '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
-					  $ext->addHint($contextname, $dnd_code.$device['id'], "Custom:DEVDND".$device['id']);
-          }
+					if ($device['tech'] == 'sip' || $device['tech'] == 'iax2' || $device['tech'] == 'pjsip') {
+							  $ext->add($contextname, $dnd_code.$device['id'], '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
+							  $ext->addHint($contextname, $dnd_code.$device['id'], "Custom:DEVDND".$device['id']);
+					}
 				}
 			}
 
@@ -97,7 +97,7 @@ function donotdisturb_dnd_on($c) {
 		$ext->add($id, $c, 'return', new ext_return());
 	}
 }
-		
+
 function donotdisturb_dnd_off($c) {
 	global $ext;
 	global $amp_conf;
@@ -194,44 +194,37 @@ function donotdisturb_set($extension, $state = '') {
 	global $amp_conf, $astman;
 
 	if ($state != "") {
-        	$r = $astman->database_put('DND', $extension, $state);
-                $value_opt = 'BUSY';
-        } else {
-                $astman->database_del('DND', $extension);
-                $value_opt = 'NOT_INUSE';
-        }
-        
+		$r = $astman->database_put('DND', $extension, $state);
+		$value_opt = 'BUSY';
+	} else {
+		$astman->database_del('DND', $extension);
+		$value_opt = 'NOT_INUSE';
+	}
+
 	// This is a kludge but ... check if the is DND and if so do additional processing
-        //
+	//
 	if ($amp_conf['USEDEVSTATE']) {
-        	$version = $amp_conf['ASTVERSION'];
-                if (version_compare($version, "1.6", "ge")) {
-                	$DEVSTATE = "DEVICE_STATE";
-                } else {
-                        $DEVSTATE = "DEVSTATE";
-                }
+		$devices = $astman->database_get("AMPUSER", $extension . "/device");
 
-                $devices = $astman->database_get("AMPUSER", $extension . "/device");
-
-                $device_arr = explode('&', $devices);
-                foreach ($device_arr as $device) {
-                	$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DEVDND$device)", $value_opt);
-                }
-                // And also handle the state associated with the user
-                $ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extension)", $value_opt);
-        }
+		$device_arr = explode('&', $devices);
+		foreach ($device_arr as $device) {
+			$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DEVDND$device)", $value_opt);
+		}
+		// And also handle the state associated with the user
+		$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DND$extension)", $value_opt);
+	}
 	return true;
 }
 
 function donotdisturb_get($extension = '') {
 	global $astman;
-	                
+
         $result = false;
         if ($extension) {
 		$result = $astman->database_get("DND", $extension);
 	} else {
-		$result = $astman->database_show("DND"); 
-	}	
+		$result = $astman->database_show("DND");
+	}
 
 	return $result;
 }
