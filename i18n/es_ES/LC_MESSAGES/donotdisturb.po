@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo donotdisturb module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-10 20:47-0500\n"
 "PO-Revision-Date: 2009-01-22 01:14+0100\n"
 "Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
 "Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
@@ -14,20 +14,43 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-msgid "Do-Not-Disturb (DND)"
-msgstr "No molestar (DND, Do Not Disturb)"
-
+#: /usr/src/freepbx/donotdisturb/donotdisturb.i18n.php:3
 msgid "Applications"
 msgstr ""
 
-msgid "Provides donotdisturb featurecodes"
-msgstr ""
-
+#: /usr/src/freepbx/donotdisturb/install.php:6
 msgid "DND Activate"
 msgstr "Activar no molestar"
 
+#: /usr/src/freepbx/donotdisturb/install.php:7
 msgid "DND Deactivate"
 msgstr "Desactivar no molestar"
 
+#: /usr/src/freepbx/donotdisturb/install.php:8
 msgid "DND Toggle"
 msgstr "Cambiar no molestar"
+
+#: /usr/src/freepbx/donotdisturb/ucp/Donotdisturb.class.php:41
+msgid "Do Not Disturb"
+msgstr ""
+
+#: /usr/src/freepbx/donotdisturb/ucp/Donotdisturb.class.php:87
+msgid "Do Not Disturb Has Been Updated!"
+msgstr ""
+
+#: /usr/src/freepbx/donotdisturb/donotdisturb.i18n.php:2
+#: /usr/src/freepbx/donotdisturb/install.php:5
+msgid "Do-Not-Disturb (DND)"
+msgstr "No molestar (DND, Do Not Disturb)"
+
+#: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:4
+msgid "Enable"
+msgstr ""
+
+#: /usr/src/freepbx/donotdisturb/donotdisturb.i18n.php:4
+msgid "Provides donotdisturb functionality"
+msgstr ""
+
+#: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:12
+msgid "Used to indicate that somebody does not wish to be disturbed."
+msgstr ""
