@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX donotdisturb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 20:47-0500\n"
+"POT-Creation-Date: 2015-02-11 17:48-0500\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -29,10 +29,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
-
-#: /usr/src/freepbx/donotdisturb/donotdisturb.i18n.php:3
-msgid "Applications"
-msgstr ""
 
 #: /usr/src/freepbx/donotdisturb/install.php:6
 msgid "DND Activate"
@@ -54,17 +50,12 @@ msgstr ""
 msgid "Do Not Disturb Has Been Updated!"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/donotdisturb.i18n.php:2
 #: /usr/src/freepbx/donotdisturb/install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Stör-ej (DND)"
 
 #: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:4
 msgid "Enable"
-msgstr ""
-
-#: /usr/src/freepbx/donotdisturb/donotdisturb.i18n.php:4
-msgid "Provides donotdisturb functionality"
 msgstr ""
 
 #: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:12
