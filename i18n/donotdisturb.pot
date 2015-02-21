@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 17:48-0500\n"
+"POT-Creation-Date: 2015-02-20 19:25-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,43 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /usr/src/freepbx/donotdisturb/install.php:6
+#: donotdisturb.i18n.php:4
+msgid "Applications"
+msgstr ""
+
+#: install.php:6
 msgid "DND Activate"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/install.php:7
+#: install.php:7
 msgid "DND Deactivate"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/install.php:8
+#: install.php:8
 msgid "DND Toggle"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/ucp/Donotdisturb.class.php:41
+#: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/ucp/Donotdisturb.class.php:87
+#: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb Has Been Updated!"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/install.php:5
+#: donotdisturb.i18n.php:3
+#: install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:4
+#: ucp/views/settings.php:4
 msgid "Enable"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:12
+#: donotdisturb.i18n.php:5
+msgid "Provides donotdisturb functionality"
+msgstr ""
+
+#: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
 msgstr ""

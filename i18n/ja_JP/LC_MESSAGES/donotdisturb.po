@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 17:48-0500\n"
+"POT-Creation-Date: 2015-02-20 19:25-0500\n"
 "PO-Revision-Date: 2013-11-07 13:01+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -47,40 +47,45 @@ msgstr ""
 "Language: Japanese\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: /usr/src/freepbx/donotdisturb/install.php:6
+#: donotdisturb.i18n.php:4
+msgid "Applications"
+msgstr "アプリケーション"
+
+#: install.php:6
 msgid "DND Activate"
 msgstr "DND有効"
 
-#: /usr/src/freepbx/donotdisturb/install.php:7
+#: install.php:7
 msgid "DND Deactivate"
 msgstr "DND無効"
 
-#: /usr/src/freepbx/donotdisturb/install.php:8
+#: install.php:8
 msgid "DND Toggle"
 msgstr "DNDトグル"
 
-#: /usr/src/freepbx/donotdisturb/ucp/Donotdisturb.class.php:41
+#: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/ucp/Donotdisturb.class.php:87
+#: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb Has Been Updated!"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/install.php:5
+#: donotdisturb.i18n.php:3 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "応答不可(DND)"
 
-#: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:4
+#: ucp/views/settings.php:4
 msgid "Enable"
 msgstr ""
 
-#: /usr/src/freepbx/donotdisturb/ucp/views/settings.php:12
-msgid "Used to indicate that somebody does not wish to be disturbed."
+#: donotdisturb.i18n.php:5
+msgid "Provides donotdisturb functionality"
 msgstr ""
 
-#~ msgid "Applications"
-#~ msgstr "アプリケーション"
+#: ucp/views/settings.php:12
+msgid "Used to indicate that somebody does not wish to be disturbed."
+msgstr ""
 
 #~ msgid "Provides donotdisturb featurecodes"
 #~ msgstr "応答不可のキーコードを提供します"
