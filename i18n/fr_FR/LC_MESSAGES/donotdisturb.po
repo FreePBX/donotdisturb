@@ -15,22 +15,25 @@
 #
 # Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:25-0500\n"
-"PO-Revision-Date: 2009-04-20 12:21+0100\n"
-"Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
-"Language-Team: Français <LL@li.org>\n"
+"PO-Revision-Date: 2015-04-22 23:39+0200\n"
+"Last-Translator: philippebolduc <philippe@florenceinc.com>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/donotdisturb/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: donotdisturb.i18n.php:4
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: install.php:6
 msgid "DND Activate"
@@ -46,24 +49,24 @@ msgstr "Changer Ne pas Déranger"
 
 #: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Ne pas déranger"
 
 #: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb Has Been Updated!"
-msgstr ""
+msgstr "Ne pas dérangé a été modifié !"
 
 #: donotdisturb.i18n.php:3 install.php:5
 msgid "Do-Not-Disturb (DND)"
-msgstr "Ne pas déranger"
+msgstr "Ne pas déranger (NPD)"
 
 #: ucp/views/settings.php:4
 msgid "Enable"
-msgstr ""
+msgstr "Activer"
 
 #: donotdisturb.i18n.php:5
 msgid "Provides donotdisturb functionality"
-msgstr ""
+msgstr "Fournit la fonctionnalité ne pas déranger"
 
 #: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr ""
+msgstr "Utilisé pour indiquer que quelqu'un ne souhaite pas être dérangé."

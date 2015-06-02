@@ -9,12 +9,17 @@ msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:25-0500\n"
-"PO-Revision-Date: 2008-10-19 16:38+0100\n"
-"Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
-"Language-Team: Russian <faq@postmet.com>\n"
+"PO-Revision-Date: 2015-05-01 13:39+0200\n"
+"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/donotdisturb/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: donotdisturb.i18n.php:4
 msgid "Applications"
@@ -22,23 +27,23 @@ msgstr "Приложения"
 
 #: install.php:6
 msgid "DND Activate"
-msgstr "Активировать режим Не беспокоить "
+msgstr "Активировать режим Не беспокоить"
 
 #: install.php:7
 msgid "DND Deactivate"
-msgstr "Деактивировать режим Не беспокоить "
+msgstr "Деактивировать режим Не беспокоить"
 
 #: install.php:8
 msgid "DND Toggle"
-msgstr "Переключить режим Не беспокоить "
+msgstr "Переключить режим Не беспокоить"
 
 #: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Не беспокоить"
 
 #: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb Has Been Updated!"
-msgstr ""
+msgstr "Не беспокоить обновлено!"
 
 #: donotdisturb.i18n.php:3 install.php:5
 msgid "Do-Not-Disturb (DND)"
@@ -46,15 +51,15 @@ msgstr "Режим Не беспокоить (DND)"
 
 #: ucp/views/settings.php:4
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 #: donotdisturb.i18n.php:5
 msgid "Provides donotdisturb functionality"
-msgstr ""
+msgstr "Обеспечивает возможность не беспокоить"
 
 #: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr ""
+msgstr "Используется для указания, что кто-то не желает, чтобы его беспокоили."
 
 #~ msgid "Provides donotdisturb featurecodes"
 #~ msgstr "Настройка кодов режима Не беспокоить (DND)"
