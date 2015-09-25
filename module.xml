@@ -2,11 +2,14 @@
 	<rawname>donotdisturb</rawname>
 	<repo>standard</repo>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>12.0.3</version>
-	<publisher>Schmooze Com Inc</publisher>
+	<version>13.0.3</version>
+	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.3* FREEPBX-9564 UCP goes offline after changing settings
+		*13.0.2* Version bump Beta
+		*13.0.1alpha1* Visuals
 		*12.0.3* UCP work and work for PJSIP hints
 		*12.0.2* Restructure Parts of UCP
 		*12.0.1* UCP Module Addition
@@ -22,7 +25,7 @@
 	<description>Provides donotdisturb functionality</description>
 	<category>Applications</category>
 	<supported>
-		<version>12.0</version>
+		<version>13.0</version>
 	</supported>
 	<location>release/2.11/donotdisturb-2.11.0.1.tgz</location>
 	<md5sum>e37a04d5dc7652b43f9781f56be5ed8b</md5sum>
