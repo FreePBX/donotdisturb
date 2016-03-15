@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-01 23:39-0400\n"
-"PO-Revision-Date: 2016-02-14 10:28+0200\n"
+"PO-Revision-Date: 2016-03-15 15:35+0300\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian "
 "<http://weblate.freepbx.org/projects/freepbx/donotdisturb/fa/>\n"
@@ -31,7 +31,7 @@ msgstr "dND غیرفعال"
 
 #: install.php:8
 msgid "DND Toggle"
-msgstr ""
+msgstr "آمار DND"
 
 #: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
@@ -51,4 +51,4 @@ msgstr "فعال"
 
 #: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr ""
+msgstr "برای کسانی استفاده میشود که نمیخواهند مزاحمتی داشته باشند."
