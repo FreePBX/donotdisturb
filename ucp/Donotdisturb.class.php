@@ -38,7 +38,7 @@ class Donotdisturb extends Modules{
 			if(!$this->_checkExtension($ext)) {
 				continue;
 			}
-			$states[$ext] = $this->UCP->FreePBX->Donotdisturb->getStatusByExtension($ext);
+			$states[$ext] = $this->UCP->FreePBX->Donotdisturb->getStatusByExtension($ext) == "YES" ? true : false;
 		}
 
 		return array("states" => $states);

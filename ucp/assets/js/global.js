@@ -11,79 +11,64 @@ var DonotdisturbC = UCPMC.extend({
 	},
 	poll: function(data) {
 		var self = this;
-		var change = function(extension, state, el) {
-			if(!el.length) {
-				return;
+		$.each(data.states, function(ext,state) {
+			if(typeof self.stopPropagation[ext] !== "undefined" && self.stopPropagation[ext]) {
+				return true;
 			}
-			var current = el.is(":checked");
-			if(state && !current) {
-				self.stopPropagation[extension] = true;
-				el.bootstrapToggle('on');
-				self.stopPropagation[extension] = false;
-			} else if(!state && current) {
-				self.stopPropagation[extension] = true;
-				el.bootstrapToggle('off');
-				self.stopPropagation[extension] = false;
+			var widget = $(".grid-stack-item[data-rawname=donotdisturb][data-widget_type_id='"+ext+"']:visible input[name='dndenable']"),
+				sidebar = $(".widget-extra-menu[data-module='donotdisturb'][data-widget_type_id='"+ext+"']:visible input[name='dndenable']"),
+				sstate = state ? "on" : "off";
+			if(widget.length && (widget.is(":checked") !== state)) {
+				self.stopPropagation[ext] = true;
+				widget.bootstrapToggle(sstate);
+				self.stopPropagation[ext] = false;
+			} else if(sidebar.length && (sidebar.is(":checked") !== state)) {
+				self.stopPropagation[ext] = true;
+				sidebar.bootstrapToggle(sstate);
+				self.stopPropagation[ext] = false;
 			}
-		};
-		$.each(data.states, function(ext,v) {
-			var state = (v == "YES") ? true : false;
-
-			change(ext, state, $(".grid-stack-item[data-rawname=donotdisturb][data-widget_type_id='"+ext+"'] input[name='dndenable']"));
-			change(ext, state, $(".widget-extra-menu[data-module='donotdisturb'][data-widget_type_id='"+ext+"'] input[name='dndenable']"));
 		});
 	},
 	displayWidget: function(widget_id,dashboard_id) {
 		var self = this;
-		$("div[data-id='"+widget_id+"'] .widget-content input[type='checkbox']").change(function(e) {
-			var extension = $("div[data-id='"+widget_id+"']").data("widget_type_id"),
-					checked = $(this).is(':checked');
-			if(typeof self.stopPropagation[extension] !== "undefined" && self.stopPropagation[extension]) {
-				return;
+		$(".grid-stack-item[data-id='"+widget_id+"'][data-rawname=donotdisturb] .widget-content input[name='dndenable']").change(function() {
+			var extension = $(".grid-stack-item[data-id='"+widget_id+"'][data-rawname=donotdisturb]").data("widget_type_id"),
+				sidebar = $(".widget-extra-menu[data-module='donotdisturb'][data-widget_type_id='"+extension+"']:visible input[name='dndenable']"),
+				checked = $(this).is(':checked'),
+				name = $(this).prop('name');
+			if(sidebar.length && sidebar.is(":checked") !== checked) {
+				var state = checked ? "on" : "off";
+				sidebar.bootstrapToggle(state);
 			}
-			self.saveSettings(extension, {enable: checked}, function(data) {
-				var el = $(".widget-extra-menu[data-module='donotdisturb'][data-widget_type_id='"+extension+"'] input[name='dndenable']");
-				if(el.length) {
-					if(checked) {
-						el.bootstrapToggle('on');
-					} else {
-						el.bootstrapToggle('off');
-					}
-				}
-			});
+			self.saveSettings(extension, {enable: checked});
 		});
 	},
 	saveSettings: function(extension, data, callback) {
 		var self = this;
-		self.stopPropagation[extension] = true;
 		data.ext = extension;
 		data.module = "donotdisturb";
 		data.command = "enable";
+		this.stopPropagation[extension] = true;
 		$.post( UCP.ajaxUrl, data, callback).always(function() {
 			self.stopPropagation[extension] = false;
 		});
 	},
 	displaySimpleWidget: function(widget_type_id) {
 		var self = this;
-		$(".widget-extra-menu[data-module=donotdisturb] input[type='checkbox']").change(function(e) {
+		$(".widget-extra-menu[data-module=donotdisturb] input[name='dndenable']").change(function(e) {
 			var extension = widget_type_id,
-					checked = $(this).is(':checked');
-			if(typeof self.stopPropagation[extension] !== "undefined" && self.stopPropagation[extension]) {
-				return;
-			}
-			self.saveSettings(extension, {enable: $(this).is(':checked')}, function(data){
-				if (data.status) {
-					//update elements on the current dashboard if there are any
-					var el = $(".grid-stack-item[data-rawname='donotdisturb'][data-widget_type_id='"+extension+"'] input[name='dndenable']");
-					if(el.length) {
-						if(checked) {
-							el.bootstrapToggle('on');
-						} else {
-							el.bootstrapToggle('off');
-						}
-					}
+				checked = $(this).is(':checked'),
+				name = $(this).prop('name'),
+				el = $(".grid-stack-item[data-rawname=donotdisturb][data-widget_type_id='"+extension+"']:visible input[name='dndenable']");
+
+			if(el.length) {
+				if(el.is(":checked") !== checked) {
+					var state = checked ? "on" : "off";
+					el.bootstrapToggle(state);
 				}
-			});
+			} else {
+				self.saveSettings(extension, {enable: checked});
+			}
 		});
 	}
 });
