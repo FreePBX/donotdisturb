@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-01 23:39-0400\n"
+"POT-Creation-Date: 2017-06-01 19:27-0400\n"
 "PO-Revision-Date: 2015-05-01 13:39+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,15 +21,19 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: install.php:6
+#: donotdisturb.i18n.php:6
+msgid "Applications"
+msgstr "Приложения"
+
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr "Активировать режим Не беспокоить"
 
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr "Деактивировать режим Не беспокоить"
 
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr "Переключить режим Не беспокоить"
 
@@ -41,7 +45,7 @@ msgstr "Не беспокоить"
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Не беспокоить обновлено!"
 
-#: install.php:5
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Режим Не беспокоить (DND)"
 
@@ -49,15 +53,13 @@ msgstr "Режим Не беспокоить (DND)"
 msgid "Enable"
 msgstr "Включить"
 
+#: donotdisturb.i18n.php:8
+msgid "Provides donotdisturb functionality"
+msgstr "Обеспечивает возможность не беспокоить"
+
 #: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
 msgstr "Используется для указания, что кто-то не желает, чтобы его беспокоили."
-
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid "Provides donotdisturb functionality"
-#~ msgstr "Обеспечивает возможность не беспокоить"
 
 #~ msgid "Provides donotdisturb featurecodes"
 #~ msgstr "Настройка кодов режима Не беспокоить (DND)"

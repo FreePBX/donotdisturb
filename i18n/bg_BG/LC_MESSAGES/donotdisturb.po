@@ -1,16 +1,16 @@
-#: donotdisturb.i18n.php:4
+#: donotdisturb.i18n.php:6
 msgid "Applications"
 msgstr ""
 
-#: install.php:6
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr ""
 
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr ""
 
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr ""
 
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Do Not Disturb Has Been Updated!"
 msgstr ""
 
-#: donotdisturb.i18n.php:3 install.php:5
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr ""
 
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: donotdisturb.i18n.php:5
+#: donotdisturb.i18n.php:8
 msgid "Provides donotdisturb functionality"
 msgstr ""
 
