@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 19:27-0400\n"
-"PO-Revision-Date: 2017-07-04 08:51+0200\n"
+"PO-Revision-Date: 2017-07-04 08:52+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/donotdisturb/vi/>\n"
@@ -27,11 +27,11 @@ msgstr "Các ứng dụng"
 
 #: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
-msgstr "Kích hoạt tính năng DND ( Không được làm phiền)"
+msgstr "Kích hoạt tính năng DND"
 
 #: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
-msgstr "Tắt tính năng DND ( Không được làm phiền)"
+msgstr "Tắt tính năng DND"
 
 #: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
@@ -51,7 +51,7 @@ msgstr "Không làm phiền (DND)"
 
 #: ucp/views/settings.php:4
 msgid "Enable"
-msgstr "Kích hoạt"
+msgstr "Bật"
 
 #: donotdisturb.i18n.php:8
 msgid "Provides donotdisturb functionality"
