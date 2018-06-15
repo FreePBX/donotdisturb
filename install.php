@@ -28,5 +28,3 @@ $fcc->setDescription('DND Toggle');
 $fcc->setDefault('*76');
 $fcc->update();
 unset($fcc);
-
-?>

@@ -16,21 +16,10 @@ class Donotdisturb implements BMO {
 
 	}
 
-	public function install() {
+	public function install() {}
+	public function uninstall() {}
 
-	}
-	public function uninstall() {
-
-	}
-	public function backup(){
-
-	}
-	public function restore($backup){
-
-	}
-	public function genConfig() {
-
-	}
+	public function genConfig() {}
 
 	public function getAllStatuses() {
 		return $this->FreePBX->astman->database_show('DND');
