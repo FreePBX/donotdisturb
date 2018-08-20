@@ -3,60 +3,60 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for donotdisturb
-# Copyright (C) 2008-2015 Sangoma, Inc.
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 19:27-0400\n"
-"PO-Revision-Date: 2018-06-26 14:06+0000\n"
-"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
-"Language-Team: German <http://*/projects/freepbx/donotdisturb/de/>\n"
-"Language: de_DE\n"
+"PO-Revision-Date: 2017-07-04 08:52+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/donotdisturb/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.19.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: donotdisturb.i18n.php:6
 msgid "Applications"
-msgstr "Anwendungen"
+msgstr "Các ứng dụng"
 
 #: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
-msgstr "DND aktiviert"
+msgstr "Kích hoạt tính năng DND"
 
 #: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
-msgstr "DND deaktiviert"
+msgstr "Tắt tính năng DND"
 
 #: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
-msgstr "DND umschalten"
+msgstr "Chế độ chuyển DND"
 
 #: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
-msgstr "Bitte nicht stören"
+msgstr "Không làm phiền"
 
 #: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb Has Been Updated!"
-msgstr "Bitte nicht stören wurde aktualisiert!"
+msgstr "Tính năng không làm phiền đã được cập nhật!"
 
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
-msgstr "Bitte-Nicht-Stören (DND)"
+msgstr "Không làm phiền (DND)"
 
 #: ucp/views/settings.php:4
 msgid "Enable"
-msgstr "Aktivieren"
+msgstr "Bật"
 
 #: donotdisturb.i18n.php:8
 msgid "Provides donotdisturb functionality"
-msgstr "Stellt eine Bitte-nicht-stören-Funktionalität bereit"
+msgstr "Cung cấp chức năng donotdisturb"
 
 #: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr ""
-"Wird verwendet, um anzuzeigen, dass jemand nicht gestört werden möchte."
+msgstr "Được sử dụng để hiển thị những ai không muốn bị làm phiền."

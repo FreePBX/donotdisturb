@@ -35,7 +35,7 @@ class Donotdisturb implements BMO {
 			$value_opt = 'BUSY';
 		} else {
 			$ret = $this->FreePBX->astman->database_del('DND',$extension);
-			$value_opt = 'NOT_INUSE';
+			$value_opt = 'UNAVAILABLE';
 		}
 
 		if ($this->FreePBX->Config->get_conf_setting('USEDEVSTATE')) {

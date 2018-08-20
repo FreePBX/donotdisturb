@@ -49,7 +49,7 @@ function donotdisturb_get_config($engine) {
 				$device_list = core_devices_list("all", 'full', true);
 
 				$dnd_length = strlen($dnd_code);
-				$ext->add($contextname, '_'.$dnd_code.'X.', '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
+			        $ext->add($contextname, '_'.$dnd_code.'X.', '', new ext_goto("1",$dnd_code,"app-dnd-toggle"));
 				$ext->addHint($contextname, '_'.$dnd_code.'X.', "Custom:DEVDND".'${EXTEN:'.$dnd_length.'}');
 
 				/*
@@ -79,12 +79,9 @@ function donotdisturb_dnd_on($c) {
 
 	$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
-	$ext->add($id, $c, '', new ext_macro('user-callerid')); // $cmd,n,Macro(user-callerid)
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(name-charset,i)','utf8'));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(name,i)',_("Do Not Disturb: ON")));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(num,i)','${AMPUSER}'));
 	$ext->add($id, $c, '', new ext_answer('')); // $cmd,1,Answer
-	$ext->add($id, $c, '', new ext_wait('1')); // $cmd,n,Wait(1) TODO: why?
+	$ext->add($id, $c, '', new ext_wait('1')); // $cmd,n,Wait(1)
+	$ext->add($id, $c, '', new ext_macro('user-callerid')); // $cmd,n,Macro(user-callerid)
 	$ext->add($id, $c, '', new ext_setvar('DB(DND/${AMPUSER})', 'YES')); // $cmd,n,Set(...=YES)
 	if ($amp_conf['USEDEVSTATE']) {
 		$ext->add($id, $c, '', new ext_setvar('STATE', 'BUSY'));
@@ -121,15 +118,12 @@ function donotdisturb_dnd_off($c) {
 
 	$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
-	$ext->add($id, $c, '', new ext_macro('user-callerid')); // $cmd,n,Macro(user-callerid)
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(name-charset,i)','utf8'));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(name,i)',_("Do Not Disturb: OFF")));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(num,i)','${AMPUSER}'));
 	$ext->add($id, $c, '', new ext_answer('')); // $cmd,1,Answer
-	$ext->add($id, $c, '', new ext_wait('1')); // $cmd,n,Wait(1) TODO: WHY?
+	$ext->add($id, $c, '', new ext_wait('1')); // $cmd,n,Wait(1)
+	$ext->add($id, $c, '', new ext_macro('user-callerid')); // $cmd,n,Macro(user-callerid)
 	$ext->add($id, $c, '', new ext_dbdel('DND/${AMPUSER}')); // $cmd,n,DBdel(..)
 	if ($amp_conf['USEDEVSTATE']) {
-		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
+		$ext->add($id, $c, '', new ext_setvar('STATE', 'UNAVAILABLE'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
 	if ($amp_conf['FCBEEPONLY']) {
@@ -162,14 +156,9 @@ function donotdisturb_dnd_toggle($c) {
 	$id = "app-dnd-toggle"; // The context to be included
 	$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
-	$ext->add($id, $c, '', new ext_macro('user-callerid'));
-	$ext->add($id, $c, '', new ext_execif('$["${DB(DND/${AMPUSER})}" = ""]', 'Set', 'STATE=ON', 'Set', 'STATE=OFF'));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(name-charset,i)','utf8'));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(name,i)',sprintf(_("Do Not Disturb: %s"),'${STATE}')));
-	$ext->add($id, $c, '', new ext_set('CONNECTEDLINE(num,i)','${AMPUSER}'));
 	$ext->add($id, $c, '', new ext_answer(''));
 	$ext->add($id, $c, '', new ext_wait('1'));
-
+	$ext->add($id, $c, '', new ext_macro('user-callerid'));
 
 	$ext->add($id, $c, '', new ext_gotoif('$["${DB(DND/${AMPUSER})}" = ""]', 'activate', 'deactivate'));
 
@@ -187,7 +176,7 @@ function donotdisturb_dnd_toggle($c) {
 
 	$ext->add($id, $c, 'deactivate', new ext_dbdel('DND/${AMPUSER}'));
 	if ($amp_conf['USEDEVSTATE']) {
-		$ext->add($id, $c, '', new ext_setvar('STATE', 'NOT_INUSE'));
+		$ext->add($id, $c, '', new ext_setvar('STATE', 'UNAVAILABLE'));
 		$ext->add($id, $c, '', new ext_gosub('1', 'sstate', $id));
 	}
 	if ($amp_conf['FCBEEPONLY']) {
@@ -218,7 +207,7 @@ function donotdisturb_set($extension, $state = '') {
 		$value_opt = 'BUSY';
 	} else {
 		$astman->database_del('DND', $extension);
-		$value_opt = 'NOT_INUSE';
+		$value_opt = 'UNAVAILABLE';
 	}
 
 	// This is a kludge but ... check if the is DND and if so do additional processing
@@ -248,5 +237,3 @@ function donotdisturb_get($extension = '') {
 
 	return $result;
 }
-
-?>
