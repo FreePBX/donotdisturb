@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 19:27-0400\n"
+"POT-Creation-Date: 2018-08-20 12:47-0400\n"
 "PO-Revision-Date: 2018-06-26 14:06+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/donotdisturb/de/>\n"
@@ -36,27 +36,42 @@ msgstr "DND deaktiviert"
 msgid "DND Toggle"
 msgstr "DND umschalten"
 
-#: ucp/Donotdisturb.class.php:41
+#: ucp/views/widget.php:2
+msgid "Disabled"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:84
 msgid "Do Not Disturb"
 msgstr "Bitte nicht stören"
 
-#: ucp/Donotdisturb.class.php:87
+#: ucp/Donotdisturb.class.php:150
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Bitte nicht stören wurde aktualisiert!"
+
+#: ucp/Donotdisturb.class.php:71
+#, php-format
+msgid "Do Not Disturb for %s"
+msgstr ""
 
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Bitte-Nicht-Stören (DND)"
 
-#: ucp/views/settings.php:4
-msgid "Enable"
-msgstr "Aktivieren"
+#: ucp/views/widget.php:2
+msgid "Enabled"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:101
+msgid "Follow Me"
+msgstr ""
 
 #: donotdisturb.i18n.php:8
 msgid "Provides donotdisturb functionality"
 msgstr "Stellt eine Bitte-nicht-stören-Funktionalität bereit"
 
-#: ucp/views/settings.php:12
-msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr ""
-"Wird verwendet, um anzuzeigen, dass jemand nicht gestört werden möchte."
+#~ msgid "Enable"
+#~ msgstr "Aktivieren"
+
+#~ msgid "Used to indicate that somebody does not wish to be disturbed."
+#~ msgstr ""
+#~ "Wird verwendet, um anzuzeigen, dass jemand nicht gestört werden möchte."

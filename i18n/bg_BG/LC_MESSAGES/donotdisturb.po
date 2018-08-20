@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-08 12:22+0000\n"
+"POT-Creation-Date: 2018-08-20 12:47-0400\n"
 "PO-Revision-Date: 2018-07-08 12:22+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/donotdisturb/bg/>\n"
@@ -29,26 +29,41 @@ msgstr "DND Изключи"
 msgid "DND Toggle"
 msgstr "DND Превключи"
 
-#: ucp/Donotdisturb.class.php:41
+#: ucp/views/widget.php:2
+msgid "Disabled"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:84
 msgid "Do Not Disturb"
 msgstr "Не Ме Безпокой"
 
-#: ucp/Donotdisturb.class.php:87
+#: ucp/Donotdisturb.class.php:150
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Не Ме Безпокой е Актуализирано!"
+
+#: ucp/Donotdisturb.class.php:71
+#, php-format
+msgid "Do Not Disturb for %s"
+msgstr ""
 
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Не Ме Безпокой (DND)"
 
-#: ucp/views/settings.php:4
-msgid "Enable"
-msgstr "Разреши"
+#: ucp/views/widget.php:2
+msgid "Enabled"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:101
+msgid "Follow Me"
+msgstr ""
 
 #: donotdisturb.i18n.php:8
 msgid "Provides donotdisturb functionality"
 msgstr "Предоставя функцията не-ме безпокойте"
 
-#: ucp/views/settings.php:12
-msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr "Използва се за индикиране, че някой не желае да бъде обезпокояван."
+#~ msgid "Enable"
+#~ msgstr "Разреши"
+
+#~ msgid "Used to indicate that somebody does not wish to be disturbed."
+#~ msgstr "Използва се за индикиране, че някой не желае да бъде обезпокояван."
