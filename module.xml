@@ -2,11 +2,12 @@
 	<rawname>donotdisturb</rawname>
 	<repo>standard</repo>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>15.0.2</version>
+	<version>15.0.3</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*15.0.3* Rest Api 
 		*15.0.2* Packaging of ver 15.0.2
 		*15.0.1* Backup 15.0
 	</changelog>
