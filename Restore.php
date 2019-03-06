@@ -11,9 +11,10 @@ class Restore Extends Base\RestoreBase{
 		foreach($dnd->getAllStatuses() as $key => $value){
 				$dnd->setStatusByExtension(str_replace('/DND/', '', $key));
 		}
-		foreach($configs as $key => $value){
+		foreach($configs['astdb'] as $key => $value){
 				$dnd->setStatusByExtension(str_replace('/DND/', '', $key), $value);
 		}
+		$this->importFeatureCodes($configs['features']);
 	}
 	public function processLegacy($pdo, $data, $tables, $unknownTables){
 		$dnd = $this->FreePBX->Donotdisturb;
@@ -24,5 +25,6 @@ class Restore Extends Base\RestoreBase{
 		foreach ($astdb['DND'] as $key => $value) {
 			$dnd->setStatusByExtension(str_replace('/DND/', '', $key), $value);
 		}
+		$this->restoreLegacyFeatureCodes($pdo);
 	}
 }
