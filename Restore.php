@@ -2,7 +2,7 @@
 namespace FreePBX\modules\Donotdisturb;
 use FreePBX\modules\Backup as Base;
 class Restore Extends Base\RestoreBase{
-	public function runRestore($jobid){
+	public function runRestore(){
 		$configs = $this->getConfigs();
 		$dnd = $this->FreePBX->Donotdisturb;
 		/**
