@@ -20,10 +20,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 19:27-0400\n"
+"POT-Creation-Date: 2020-08-17 02:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,26 +45,37 @@ msgstr ""
 msgid "DND Toggle"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:41
+#: ucp/views/widget.php:2
+msgid "Disabled"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:84
 msgid "Do Not Disturb"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:87
+#: ucp/Donotdisturb.class.php:150
 msgid "Do Not Disturb Has Been Updated!"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:71
+#, php-format
+msgid "Do Not Disturb for %s"
+msgstr ""
+
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
 msgstr ""
 
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr ""
 
-#: ucp/views/settings.php:4
-msgid "Enable"
+#: ucp/views/widget.php:2
+msgid "Enabled"
 msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid "Provides donotdisturb functionality"
-msgstr ""
-
-#: ucp/views/settings.php:12
-msgid "Used to indicate that somebody does not wish to be disturbed."
+#: ucp/Donotdisturb.class.php:101
+msgid "Follow Me"
 msgstr ""

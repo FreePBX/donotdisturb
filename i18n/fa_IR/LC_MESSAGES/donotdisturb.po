@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 19:27-0400\n"
+"POT-Creation-Date: 2020-08-17 02:40+0000\n"
 "PO-Revision-Date: 2019-01-25 14:57+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/donotdisturb/fa/>\n"
@@ -36,26 +36,46 @@ msgstr "dND غیرفعال"
 msgid "DND Toggle"
 msgstr "آمار DND"
 
-#: ucp/Donotdisturb.class.php:41
+#: ucp/views/widget.php:2
+msgid "Disabled"
+msgstr ""
+
+#: ucp/Donotdisturb.class.php:84
 msgid "Do Not Disturb"
 msgstr "مزاحم نشو"
 
-#: ucp/Donotdisturb.class.php:87
+#: ucp/Donotdisturb.class.php:150
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "مزاحم نشو به روز شد!"
+
+#: ucp/Donotdisturb.class.php:71
+#, php-format
+msgid "Do Not Disturb for %s"
+msgstr ""
+
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
 
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "مزاحم نشو (DND)"
 
-#: ucp/views/settings.php:4
-msgid "Enable"
-msgstr "فعال"
+#: ucp/views/widget.php:2
+msgid "Enabled"
+msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid "Provides donotdisturb functionality"
-msgstr "فراهم کردن قابلیت donotdisturb"
+#: ucp/Donotdisturb.class.php:101
+msgid "Follow Me"
+msgstr ""
 
-#: ucp/views/settings.php:12
-msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr "برای کسانی استفاده میشود که نمیخواهند مزاحمتی داشته باشند."
+#~ msgid "Enable"
+#~ msgstr "فعال"
+
+#~ msgid "Provides donotdisturb functionality"
+#~ msgstr "فراهم کردن قابلیت donotdisturb"
+
+#~ msgid "Used to indicate that somebody does not wish to be disturbed."
+#~ msgstr "برای کسانی استفاده میشود که نمیخواهند مزاحمتی داشته باشند."
