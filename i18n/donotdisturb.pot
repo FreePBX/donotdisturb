@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for donotdisturb
-# Copyright (C) 2008-2019 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2020 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-11 08:51+0530\n"
+"POT-Creation-Date: 2020-08-17 02:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,6 +54,12 @@ msgstr ""
 msgid "Do Not Disturb for %s"
 msgstr ""
 
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
 #: donotdisturb.i18n.php:4
 #: install.php:5
 msgid "Do-Not-Disturb (DND)"
@@ -65,8 +71,4 @@ msgstr ""
 
 #: ucp/Donotdisturb.class.php:101
 msgid "Follow Me"
-msgstr ""
-
-#: donotdisturb.i18n.php:8
-msgid "Provides donotdisturb functionality"
 msgstr ""

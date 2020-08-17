@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:47-0400\n"
+"POT-Creation-Date: 2020-08-17 02:42+0000\n"
 "PO-Revision-Date: 2013-11-07 13:01+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -80,6 +80,12 @@ msgstr ""
 msgid "Do Not Disturb for %s"
 msgstr ""
 
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "応答不可(DND)"
@@ -90,10 +96,6 @@ msgstr ""
 
 #: ucp/Donotdisturb.class.php:101
 msgid "Follow Me"
-msgstr ""
-
-#: donotdisturb.i18n.php:8
-msgid "Provides donotdisturb functionality"
 msgstr ""
 
 #~ msgid "Provides donotdisturb featurecodes"

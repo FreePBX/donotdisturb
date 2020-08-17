@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:47-0400\n"
+"POT-Creation-Date: 2020-08-17 02:42+0000\n"
 "PO-Revision-Date: 2018-05-29 09:32+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/donotdisturb/it/>\n"
@@ -48,6 +48,12 @@ msgstr "Non disturbare è stato aggiornato!"
 msgid "Do Not Disturb for %s"
 msgstr ""
 
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Non-Disturbare (DND)"
@@ -60,9 +66,8 @@ msgstr ""
 msgid "Follow Me"
 msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid "Provides donotdisturb functionality"
-msgstr "Fornisce funzionalità di donotdisturb"
+#~ msgid "Provides donotdisturb functionality"
+#~ msgstr "Fornisce funzionalità di donotdisturb"
 
 #~ msgid "Enable"
 #~ msgstr "Abilitare"

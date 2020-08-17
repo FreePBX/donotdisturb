@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo donotdisturb module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:47-0400\n"
+"POT-Creation-Date: 2020-08-17 02:42+0000\n"
 "PO-Revision-Date: 2015-03-23 01:10+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -51,6 +51,12 @@ msgstr "No Molestar ha sido actualizado!"
 msgid "Do Not Disturb for %s"
 msgstr ""
 
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "No molestar (DND, Do Not Disturb)"
@@ -63,9 +69,8 @@ msgstr ""
 msgid "Follow Me"
 msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid "Provides donotdisturb functionality"
-msgstr "Provee facilidad nomolestar"
+#~ msgid "Provides donotdisturb functionality"
+#~ msgstr "Provee facilidad nomolestar"
 
 #~ msgid "Enable"
 #~ msgstr "Activar"
