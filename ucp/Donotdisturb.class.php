@@ -32,18 +32,81 @@ class Donotdisturb extends Modules{
 		$this->Modules = $Modules;
 	}
 
-	public function getSettingsDisplay($ext) {
+	public function poll($data) {
+		$states = array();
+		foreach($data as $ext) {
+			if(!$this->_checkExtension($ext)) {
+				continue;
+			}
+			$states[$ext] = $this->UCP->FreePBX->Donotdisturb->getStatusByExtension($ext) == "YES" ? true : false;
+		}
+
+		return array("states" => $states);
+	}
+
+	public function getWidgetList() {
+		$widgetList = $this->getSimpleWidgetList();
+
+		return $widgetList;
+	}
+
+	public function getSimpleWidgetList() {
+		$widgets = array();
+
+		$user = $this->UCP->User->getUser();
+		$extensions = $this->UCP->getCombinedSettingByID($user['id'],'Settings','assigned');
+
+		if (!empty($extensions)) {
+			foreach($extensions as $extension) {
+				$data = $this->UCP->FreePBX->Core->getDevice($extension);
+				if(empty($data) || empty($data['description'])) {
+					$data = $this->UCP->FreePBX->Core->getUser($extension);
+					$name = $data['name'];
+				} else {
+					$name = $data['description'];
+				}
+
+				$widgets[$extension] = array(
+					"display" => $name,
+					"description" => sprintf(_("Do Not Disturb for %s"),$name),
+					"defaultsize" => array("height" => 2, "width" => 1),
+					"minsize" => array("height" => 2, "width" => 1)
+				);
+			}
+		}
+
+		if (empty($widgets)) {
+			return array();
+		}
+
+		return array(
+			"rawname" => "donotdisturb",
+			"display" => _("Do Not Disturb"),
+			"icon" => "fa fa-power-off",
+			"list" => $widgets
+		);
+	}
+
+	public function getWidgetDisplay($id) {
+		if (!$this->_checkExtension($id)) {
+			return array();
+		}
+
 		$displayvars = array(
-			"enabled" => $this->UCP->FreePBX->Donotdisturb->getStatusByExtension($ext)
+			"extension" => $id,
+			"enabled" => $this->UCP->FreePBX->Donotdisturb->getStatusByExtension($id)
 		);
-		$out = array(
-			array(
-				"title" => _('Do Not Disturb'),
-				"content" => $this->load_view(__DIR__.'/views/settings.php',$displayvars),
-				"size" => 6
-			)
+
+		$display = array(
+			'title' => _("Follow Me"),
+			'html' => $this->load_view(__DIR__.'/views/widget.php',$displayvars)
 		);
-		return $out;
+
+		return $display;
+	}
+
+	public function getSimpleWidgetSettingsDisplay($id) {
+		return $this->getWidgetSettingsDisplay($id);
 	}
 
 	/**

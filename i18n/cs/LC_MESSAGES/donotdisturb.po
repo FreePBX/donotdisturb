@@ -3,59 +3,63 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for donotdisturb
-# Copyright (C) 2008-2015 Sangoma, Inc.
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 19:27-0400\n"
-"PO-Revision-Date: 2019-01-25 14:57+0000\n"
-"Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
-"Language-Team: Persian <http://*/projects/freepbx/donotdisturb/fa/>\n"
-"Language: fa_IR\n"
+"PO-Revision-Date: 2018-09-04 11:25+0000\n"
+"Last-Translator: Petr Varvarovsky <petrv@atlantis.cz>\n"
+"Language-Team: Czech <http://*/projects/freepbx/donotdisturb/cs/>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 
 #: donotdisturb.i18n.php:6
 msgid "Applications"
-msgstr "برنامه ها"
+msgstr "Aplikace"
 
-#: donotdisturb.i18n.php:12 install.php:6
+#: donotdisturb.i18n.php:12
+#: install.php:6
 msgid "DND Activate"
-msgstr "DND فعال"
+msgstr "Aktivovat DND"
 
-#: donotdisturb.i18n.php:10 install.php:7
+#: donotdisturb.i18n.php:10
+#: install.php:7
 msgid "DND Deactivate"
-msgstr "dND غیرفعال"
+msgstr "Deaktivovat DND"
 
-#: donotdisturb.i18n.php:14 install.php:8
+#: donotdisturb.i18n.php:14
+#: install.php:8
 msgid "DND Toggle"
-msgstr "آمار DND"
+msgstr "Přepnout DND"
 
 #: ucp/Donotdisturb.class.php:41
 msgid "Do Not Disturb"
-msgstr "مزاحم نشو"
+msgstr "Nerušit"
 
 #: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb Has Been Updated!"
-msgstr "مزاحم نشو به روز شد!"
+msgstr "Funkce Nerušit byla aktualizována!"
 
-#: donotdisturb.i18n.php:4 install.php:5
+#: donotdisturb.i18n.php:4
+#: install.php:5
 msgid "Do-Not-Disturb (DND)"
-msgstr "مزاحم نشو (DND)"
+msgstr "Nerušit (DND)"
 
 #: ucp/views/settings.php:4
 msgid "Enable"
-msgstr "فعال"
+msgstr "Povolit"
 
 #: donotdisturb.i18n.php:8
 msgid "Provides donotdisturb functionality"
-msgstr "فراهم کردن قابلیت donotdisturb"
+msgstr "Poskytuje funkci Nerušit"
 
 #: ucp/views/settings.php:12
 msgid "Used to indicate that somebody does not wish to be disturbed."
-msgstr "برای کسانی استفاده میشود که نمیخواهند مزاحمتی داشته باشند."
+msgstr "Označuje, že někdo nechce být rušen."
