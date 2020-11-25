@@ -15,7 +15,7 @@
 		*15.0.1* Backup 15.0
 	</changelog>
 	<description>Do not disturb (DND) allows calls to be rejected at the user's request via a feature code, UCP setting, or REST App.</description>
-  	<more-info>https://wiki.freepbx.org/display/F2/Do+Not+Disturb+Module</more-info>
+  	<more-info>https://wiki.freepbx.org/display/FPG/Do+Not+Disturb+Module</more-info>
 
 	<category>Applications</category>
 	<supported>
