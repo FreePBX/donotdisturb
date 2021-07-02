@@ -50,4 +50,33 @@ class Donotdisturb implements BMO {
 		}
 		return $ret;
 	}
+
+	/* UCP template to get the user assigned vm extension details
+	* @defaultexten is the default_extensionof the userman userid
+	* @userid is userman user id
+	* @widget is an array we need to replace few item based on the userid
+	*/
+	public function getWidgetListByModule($defaultexten, $userid,$widget) {
+		// if the widget_type_id is not defaultextension and widget_type_id is not in extensions
+		// then return only the defaultexten details
+		$widgets = array();
+		$widget_type_id = $widget['widget_type_id'];// this will be an extension number
+		$extensions = $this->FreePBX->Ucp->getCombinedSettingByID($userid,'Settings','assigned');
+		if(in_array($widget_type_id,$extensions)){
+			// nothing to do return the same widget
+			return $widget;
+		}else {// sent the default extension
+			$data = $this->FreePBX->Core->getDevice($defaultexten);
+			if(empty($data) || empty($data['description'])) {
+				$data = $this->FreePBX->Core->getUser($defaultexten);
+				$name = $data['name'];
+			} else {
+				$name = $data['description'];
+			}
+			$widget['widget_type_id'] = $defaultexten;
+			$widget['name'] = $name;
+			return $widget;
+		}
+		return false;
+	}
 }
