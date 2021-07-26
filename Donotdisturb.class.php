@@ -62,6 +62,7 @@ class Donotdisturb implements BMO {
 		$widgets = array();
 		$widget_type_id = $widget['widget_type_id'];// this will be an extension number
 		$extensions = $this->FreePBX->Ucp->getCombinedSettingByID($userid,'Settings','assigned');
+		$extensions = is_array($extensions)?$extensions:[];
 		if(in_array($widget_type_id,$extensions)){
 			// nothing to do return the same widget
 			return $widget;
