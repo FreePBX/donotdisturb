@@ -2,11 +2,12 @@
 	<rawname>donotdisturb</rawname>
 	<repo>standard</repo>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>15.0.9</version>
+	<version>15.0.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*15.0.10* FREEI-3608 whoops error on rebuild 
 		*15.0.9* FREEI-3569 getWidgetListByModule method Dontdisturb module 
 		*15.0.8* Packaging of ver 15.0.8
 		*15.0.7* Packaging of ver 15.0.7
