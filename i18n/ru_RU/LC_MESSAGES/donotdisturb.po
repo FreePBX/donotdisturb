@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 02:40+0000\n"
-"PO-Revision-Date: 2021-11-23 10:24+0000\n"
+"PO-Revision-Date: 2021-11-24 11:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
 "donotdisturb/ru/>\n"
@@ -64,7 +64,7 @@ msgstr ""
 
 #: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
-msgstr "Режим Не беспокоить (DND)"
+msgstr "Не-беспокоить (DND)"
 
 #: ucp/views/widget.php:2
 msgid "Enabled"
