@@ -2,20 +2,17 @@
 	<rawname>donotdisturb</rawname>
 	<repo>standard</repo>
 	<name>Do-Not-Disturb (DND)</name>
-	<version>16.0.3</version>
+	<version>17.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
-		*16.0.3* FREEI-3608 whoops error on rebuild 
-		*16.0.2* FREEI-3569 getWidgetListByModule method Dontdisturb module 
-		*16.0.1* 16.0 release
+		*17.0.1* 17.0 release
 	</changelog>
 	<description>Do not disturb (DND) allows calls to be rejected at the user's request via a feature code, UCP setting, or REST App.</description>
   	<more-info>https://wiki.freepbx.org/display/FPG/Do+Not+Disturb+Module</more-info>
-
 	<category>Applications</category>
 	<supported>
-		<version>16.0</version>
+		<version>17.0</version>
 	</supported>
 </module>
