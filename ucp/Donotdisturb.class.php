@@ -24,7 +24,7 @@
  */
 namespace UCP\Modules;
 use \UCP\Modules as Modules;
-
+#[\AllowDynamicProperties]
 class Donotdisturb extends Modules{
 	protected $module = 'Donotdisturb';
 	private $user = null;
