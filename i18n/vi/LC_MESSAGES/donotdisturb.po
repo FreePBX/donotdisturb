@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 02:42+0000\n"
+"POT-Creation-Date: 2023-09-13 10:45+0000\n"
 "PO-Revision-Date: 2017-07-04 08:52+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,19 +21,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: donotdisturb.i18n.php:6
-msgid "Applications"
-msgstr "Các ứng dụng"
-
-#: donotdisturb.i18n.php:12 install.php:6
+#: install.php:6
 msgid "DND Activate"
 msgstr "Kích hoạt tính năng DND"
 
-#: donotdisturb.i18n.php:10 install.php:7
+#: install.php:7
 msgid "DND Deactivate"
 msgstr "Tắt tính năng DND"
 
-#: donotdisturb.i18n.php:14 install.php:8
+#: install.php:8
 msgid "DND Toggle"
 msgstr "Chế độ chuyển DND"
 
@@ -41,26 +37,20 @@ msgstr "Chế độ chuyển DND"
 msgid "Disabled"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:84
+#: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb"
 msgstr "Không làm phiền"
 
-#: ucp/Donotdisturb.class.php:150
+#: ucp/Donotdisturb.class.php:153
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Tính năng không làm phiền đã được cập nhật!"
 
-#: ucp/Donotdisturb.class.php:71
+#: ucp/Donotdisturb.class.php:74
 #, php-format
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid ""
-"Do not disturb (DND) allows calls to be rejected at the user's request via a "
-"feature code, UCP setting, or REST App."
-msgstr ""
-
-#: donotdisturb.i18n.php:4 install.php:5
+#: install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Không làm phiền (DND)"
 
@@ -68,9 +58,12 @@ msgstr "Không làm phiền (DND)"
 msgid "Enabled"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:101
+#: ucp/Donotdisturb.class.php:104
 msgid "Follow Me"
 msgstr ""
+
+#~ msgid "Applications"
+#~ msgstr "Các ứng dụng"
 
 #~ msgid "Provides donotdisturb functionality"
 #~ msgstr "Cung cấp chức năng donotdisturb"

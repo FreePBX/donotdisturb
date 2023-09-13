@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 02:42+0000\n"
+"POT-Creation-Date: 2023-09-13 10:45+0000\n"
 "PO-Revision-Date: 2018-07-08 12:22+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/donotdisturb/bg/>\n"
@@ -13,19 +13,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.19.1\n"
 
-#: donotdisturb.i18n.php:6
-msgid "Applications"
-msgstr "Приложения"
-
-#: donotdisturb.i18n.php:12 install.php:6
+#: install.php:6
 msgid "DND Activate"
 msgstr "DND Включи"
 
-#: donotdisturb.i18n.php:10 install.php:7
+#: install.php:7
 msgid "DND Deactivate"
 msgstr "DND Изключи"
 
-#: donotdisturb.i18n.php:14 install.php:8
+#: install.php:8
 msgid "DND Toggle"
 msgstr "DND Превключи"
 
@@ -33,26 +29,20 @@ msgstr "DND Превключи"
 msgid "Disabled"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:84
+#: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb"
 msgstr "Не Ме Безпокой"
 
-#: ucp/Donotdisturb.class.php:150
+#: ucp/Donotdisturb.class.php:153
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Не Ме Безпокой е Актуализирано!"
 
-#: ucp/Donotdisturb.class.php:71
+#: ucp/Donotdisturb.class.php:74
 #, php-format
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid ""
-"Do not disturb (DND) allows calls to be rejected at the user's request via a "
-"feature code, UCP setting, or REST App."
-msgstr ""
-
-#: donotdisturb.i18n.php:4 install.php:5
+#: install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Не Ме Безпокой (DND)"
 
@@ -60,9 +50,12 @@ msgstr "Не Ме Безпокой (DND)"
 msgid "Enabled"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:101
+#: ucp/Donotdisturb.class.php:104
 msgid "Follow Me"
 msgstr ""
+
+#~ msgid "Applications"
+#~ msgstr "Приложения"
 
 #~ msgid "Provides donotdisturb functionality"
 #~ msgstr "Предоставя функцията не-ме безпокойте"

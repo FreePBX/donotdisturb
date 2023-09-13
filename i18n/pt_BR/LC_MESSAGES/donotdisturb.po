@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 02:42+0000\n"
+"POT-Creation-Date: 2023-09-13 10:45+0000\n"
 "PO-Revision-Date: 2016-12-12 22:58+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -21,19 +21,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: donotdisturb.i18n.php:6
-msgid "Applications"
-msgstr ""
-
-#: donotdisturb.i18n.php:12 install.php:6
+#: install.php:6
 msgid "DND Activate"
 msgstr "Ativar Não Perturbe"
 
-#: donotdisturb.i18n.php:10 install.php:7
+#: install.php:7
 msgid "DND Deactivate"
 msgstr "Desativar Não Perturbe"
 
-#: donotdisturb.i18n.php:14 install.php:8
+#: install.php:8
 msgid "DND Toggle"
 msgstr "Mudar Não Perturbe"
 
@@ -41,26 +37,20 @@ msgstr "Mudar Não Perturbe"
 msgid "Disabled"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:84
+#: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb"
 msgstr "Não Perturbe"
 
-#: ucp/Donotdisturb.class.php:150
+#: ucp/Donotdisturb.class.php:153
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Não Perturbe Foi Atualizado!"
 
-#: ucp/Donotdisturb.class.php:71
+#: ucp/Donotdisturb.class.php:74
 #, php-format
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: donotdisturb.i18n.php:8
-msgid ""
-"Do not disturb (DND) allows calls to be rejected at the user's request via a "
-"feature code, UCP setting, or REST App."
-msgstr ""
-
-#: donotdisturb.i18n.php:4 install.php:5
+#: install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Não Perturbe (DND, Do Not Disturb)"
 
@@ -68,7 +58,7 @@ msgstr "Não Perturbe (DND, Do Not Disturb)"
 msgid "Enabled"
 msgstr ""
 
-#: ucp/Donotdisturb.class.php:101
+#: ucp/Donotdisturb.class.php:104
 msgid "Follow Me"
 msgstr ""
 
