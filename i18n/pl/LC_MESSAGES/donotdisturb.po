@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 02:40+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2023-11-19 00:46+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "donotdisturb/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
@@ -26,18 +26,15 @@ msgstr ""
 msgid "Applications"
 msgstr "Aplikacje"
 
-#: donotdisturb.i18n.php:12
-#: install.php:6
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr "Aktywuj DND"
 
-#: donotdisturb.i18n.php:10
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr "Dezaktywuj DND"
 
-#: donotdisturb.i18n.php:14
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr "Załącz DND"
 
@@ -45,15 +42,15 @@ msgstr "Załącz DND"
 msgid "Disabled"
 msgstr "Wyłączony"
 
-#: ucp/Donotdisturb.class.php:84
+#: ucp/Donotdisturb.class.php:87
 msgid "Do Not Disturb"
 msgstr "Nie przeszkadzaj"
 
-#: ucp/Donotdisturb.class.php:150
+#: ucp/Donotdisturb.class.php:153
 msgid "Do Not Disturb Has Been Updated!"
 msgstr "Zaktualizowano tryb nie przeszkadzać!"
 
-#: ucp/Donotdisturb.class.php:71
+#: ucp/Donotdisturb.class.php:74
 #, php-format
 msgid "Do Not Disturb for %s"
 msgstr "Nie przeszkadzaj dla %s"
@@ -66,8 +63,7 @@ msgstr ""
 "Nie przeszkadzaj (DND) umożliwia odrzucanie połączeń na żądanie użytkownika "
 "za pośrednictwem kodu funkcji, ustawienia UCP lub aplikacji REST."
 
-#: donotdisturb.i18n.php:4
-#: install.php:5
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Nie przeszkadzaj (DND)"
 
@@ -75,6 +71,6 @@ msgstr "Nie przeszkadzaj (DND)"
 msgid "Enabled"
 msgstr "Włączony"
 
-#: ucp/Donotdisturb.class.php:101
+#: ucp/Donotdisturb.class.php:104
 msgid "Follow Me"
 msgstr "Podążaj za mną"

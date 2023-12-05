@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 10:45+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2018-06-26 14:06+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/donotdisturb/de/>\n"
@@ -20,15 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.19.1\n"
 
-#: install.php:6
+#: donotdisturb.i18n.php:6
+msgid "Applications"
+msgstr "Anwendungen"
+
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr "DND aktiviert"
 
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr "DND deaktiviert"
 
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr "DND umschalten"
 
@@ -49,7 +53,13 @@ msgstr "Bitte nicht stören wurde aktualisiert!"
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: install.php:5
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Bitte-Nicht-Stören (DND)"
 
@@ -60,9 +70,6 @@ msgstr ""
 #: ucp/Donotdisturb.class.php:104
 msgid "Follow Me"
 msgstr ""
-
-#~ msgid "Applications"
-#~ msgstr "Anwendungen"
 
 #~ msgid "Provides donotdisturb functionality"
 #~ msgstr "Stellt eine Bitte-nicht-stören-Funktionalität bereit"

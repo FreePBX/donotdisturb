@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX donotdisturb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 10:45+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -31,15 +31,19 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: install.php:6
+#: donotdisturb.i18n.php:6
+msgid "Applications"
+msgstr ""
+
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr "Aktivera Stör-ej"
 
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr "Avaktivera Stör-ej"
 
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr "Ställ om Stör-ej"
 
@@ -60,7 +64,13 @@ msgstr ""
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: install.php:5
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Stör-ej (DND)"
 

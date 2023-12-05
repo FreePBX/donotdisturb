@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 10:45+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2018-09-04 11:25+0000\n"
 "Last-Translator: Petr Varvarovsky <petrv@atlantis.cz>\n"
 "Language-Team: Czech <http://*/projects/freepbx/donotdisturb/cs/>\n"
@@ -20,15 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: install.php:6
+#: donotdisturb.i18n.php:6
+msgid "Applications"
+msgstr "Aplikace"
+
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr "Aktivovat DND"
 
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr "Deaktivovat DND"
 
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr "Přepnout DND"
 
@@ -49,7 +53,13 @@ msgstr "Funkce Nerušit byla aktualizována!"
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: install.php:5
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "Nerušit (DND)"
 
@@ -60,9 +70,6 @@ msgstr ""
 #: ucp/Donotdisturb.class.php:104
 msgid "Follow Me"
 msgstr ""
-
-#~ msgid "Applications"
-#~ msgstr "Aplikace"
 
 #~ msgid "Provides donotdisturb functionality"
 #~ msgstr "Poskytuje funkci Nerušit"

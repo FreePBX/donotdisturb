@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 10:45+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2009-02-01 15:09+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -19,15 +19,19 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: install.php:6
+#: donotdisturb.i18n.php:6
+msgid "Applications"
+msgstr ""
+
+#: donotdisturb.i18n.php:12 install.php:6
 msgid "DND Activate"
 msgstr "DND激活"
 
-#: install.php:7
+#: donotdisturb.i18n.php:10 install.php:7
 msgid "DND Deactivate"
 msgstr "DND关闭"
 
-#: install.php:8
+#: donotdisturb.i18n.php:14 install.php:8
 msgid "DND Toggle"
 msgstr "DND切换"
 
@@ -48,7 +52,13 @@ msgstr ""
 msgid "Do Not Disturb for %s"
 msgstr ""
 
-#: install.php:5
+#: donotdisturb.i18n.php:8
+msgid ""
+"Do not disturb (DND) allows calls to be rejected at the user's request via a "
+"feature code, UCP setting, or REST App."
+msgstr ""
+
+#: donotdisturb.i18n.php:4 install.php:5
 msgid "Do-Not-Disturb (DND)"
 msgstr "免打扰（DND）"
 
