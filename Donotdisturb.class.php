@@ -71,9 +71,9 @@ class Donotdisturb implements BMO {
 			$data = $this->FreePBX->Core->getDevice($defaultexten);
 			if(empty($data) || empty($data['description'])) {
 				$data = $this->FreePBX->Core->getUser($defaultexten);
-				$name = $data['name'];
+				$name = $data['name'] ?? '';
 			} else {
-				$name = $data['description'];
+				$name = $data['description'] ?? '';
 			}
 			$widget['widget_type_id'] = $defaultexten;
 			$widget['name'] = $name;
