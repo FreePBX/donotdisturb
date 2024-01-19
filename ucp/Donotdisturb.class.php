@@ -64,7 +64,7 @@ class Donotdisturb extends Modules{
 				$data = $this->UCP->FreePBX->Core->getDevice($extension);
 				if(empty($data) || empty($data['description'])) {
 					$data = $this->UCP->FreePBX->Core->getUser($extension);
-					$name = $data['name'];
+					$name = $data['name'] ?? '';
 				} else {
 					$name = $data['description'];
 				}
