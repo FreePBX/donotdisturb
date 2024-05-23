@@ -12,7 +12,8 @@ class Donotdisturb extends Base {
 		*/
 		$app->get('/users', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('donotdisturb');
-			return $response->withJson(donotdisturb_get());
+			$response->getBody()->write(json_encode(donotdisturb_get()));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -22,7 +23,8 @@ class Donotdisturb extends Base {
 		*/
 		$app->get('/users/{id}', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('donotdisturb');
-			return $response->withJson(array('status' => donotdisturb_get($args['id'])));
+			$response->getBody()->write(json_encode(array('status' => donotdisturb_get($args['id'] ?? ''))));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -33,7 +35,8 @@ class Donotdisturb extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('donotdisturb');
 			$params = $request->getParsedBody();
 			donotdisturb_set($args['id'], $params['status']);
-			return $response->withJson(true);
+			$response->getBody()->write(json_encode(true));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllWriteScopeMiddleware());
 	}
 }
