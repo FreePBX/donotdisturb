@@ -1,8 +1,11 @@
 var DonotdisturbC = UCPMC.extend({
 	init: function(){
 		this.stopPropagation = {};
+		this.prepollTime = null;
+		this.saveSettingsTime = [];
 	},
 	prepoll: function() {
+		this.prepollTime = new Date();
 		var exts = [];
 		$(".grid-stack-item[data-rawname=donotdisturb]").each(function() {
 			exts.push($(this).data("widget_type_id"));
@@ -18,14 +21,19 @@ var DonotdisturbC = UCPMC.extend({
 			var widget = $(".grid-stack-item[data-rawname=donotdisturb][data-widget_type_id='"+ext+"']:visible input[name='dndenable']"),
 				sidebar = $(".widget-extra-menu[data-module='donotdisturb'][data-widget_type_id='"+ext+"']:visible input[name='dndenable']"),
 				sstate = state ? "on" : "off";
-			if(widget.length && (widget.is(":checked") !== state)) {
-				self.stopPropagation[ext] = true;
-				widget.bootstrapToggle(sstate);
-				self.stopPropagation[ext] = false;
-			} else if(sidebar.length && (sidebar.is(":checked") !== state)) {
-				self.stopPropagation[ext] = true;
-				sidebar.bootstrapToggle(sstate);
-				self.stopPropagation[ext] = false;
+			if( 
+				! ext in self.saveSettingsTime
+				|| self.saveSettingsTime[ext] < self.prepollTime
+			){
+				if(widget.length && (widget.is(":checked") !== state)) {
+					self.stopPropagation[ext] = true;
+					widget.bootstrapToggle(sstate);
+					self.stopPropagation[ext] = false;
+				} else if(sidebar.length && (sidebar.is(":checked") !== state)) {
+					self.stopPropagation[ext] = true;
+					sidebar.bootstrapToggle(sstate);
+					self.stopPropagation[ext] = false;
+				}
 			}
 		});
 	},
@@ -44,6 +52,7 @@ var DonotdisturbC = UCPMC.extend({
 		});
 	},
 	saveSettings: function(extension, data, callback) {
+		this.saveSettingsTime[extension] = new Date();
 		var self = this;
 		data.ext = extension;
 		data.module = "donotdisturb";
