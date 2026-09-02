@@ -34,7 +34,7 @@ class Donotdisturb extends Base {
 		$app->put('/users/{id}', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('donotdisturb');
 			$params = $request->getParsedBody();
-			donotdisturb_set($args['id'], $params['status']);
+			donotdisturb_set($args['id'] ?? '', $params['status'] ?? '');
 			$response->getBody()->write(json_encode(true));
 			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllWriteScopeMiddleware());

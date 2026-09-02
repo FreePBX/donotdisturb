@@ -1,8 +1,9 @@
 <?php
 // vim: set ai ts=4 sw=4 ft=php:
 
-#[\AllowDynamicProperties]
 class Donotdisturb implements BMO {
+	private $FreePBX;
+	private $db;
 
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
@@ -42,7 +43,7 @@ class Donotdisturb implements BMO {
 		if ($this->FreePBX->Config->get_conf_setting('USEDEVSTATE')) {
 			$AST_FUNC_DEVICE_STATE = $this->FreePBX->Config->get_conf_setting('AST_FUNC_DEVICE_STATE');
 			$devices = $this->FreePBX->astman->database_get("AMPUSER", $extension . "/device");
-			$device_arr = explode('&', $devices);
+			$device_arr = explode('&', (string) $devices);
 			foreach ($device_arr as $device) {
 				$ret = $this->FreePBX->astman->set_global($AST_FUNC_DEVICE_STATE . "(Custom:DEVDND$device)", $value_opt);
 			}

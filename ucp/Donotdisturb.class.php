@@ -24,9 +24,9 @@
  */
 namespace UCP\Modules;
 use \UCP\Modules as Modules;
-#[\AllowDynamicProperties]
 class Donotdisturb extends Modules{
 	protected $module = 'Donotdisturb';
+	private $Modules;
 	private $user = null;
 	private $userId = false;
 
@@ -105,7 +105,7 @@ class Donotdisturb extends Modules{
 					$data = $this->UCP->FreePBX->Core->getUser($extension);
 					$name = $data['name'] ?? '';
 				} else {
-					$name = $data['description'];
+					$name = $data['description'] ?? '';
 				}
 
 				$widgets[$extension] = array(
@@ -133,7 +133,7 @@ class Donotdisturb extends Modules{
 		);
 
 		$display = array(
-			'title' => _("Follow Me"),
+			'title' => _("Do Not Disturb"),
 			'html' => $this->load_view(__DIR__.'/views/widget.php',$displayvars)
 		);
 
@@ -142,6 +142,10 @@ class Donotdisturb extends Modules{
 
 	public function getSimpleWidgetSettingsDisplay($id) {
 		return $this->getWidgetSettingsDisplay($id);
+	}
+
+	public function getWidgetSettingsDisplay($id) {
+		return $this->getWidgetDisplay($id);
 	}
 
 	/**
@@ -154,7 +158,7 @@ class Donotdisturb extends Modules{
 	 * @return bool True if pass
 	 */
 	function ajaxRequest($command, $settings) {
-		if(!$this->_checkExtension($_POST['ext'])) {
+		if(!$this->_checkExtension($_POST['ext'] ?? '')) {
 			return false;
 		}
 		switch($command) {
@@ -175,12 +179,13 @@ class Donotdisturb extends Modules{
 	 */
 	function ajaxHandler() {
 		$return = array("status" => false, "message" => "");
-		switch($_REQUEST['command']) {
+		switch($_REQUEST['command'] ?? '') {
 			case 'enable':
-				if($_POST['enable'] == 'true') {
-					$this->UCP->FreePBX->Donotdisturb->setStatusByExtension($_POST['ext'],"YES");
+				$extension = $_POST['ext'] ?? '';
+				if(($_POST['enable'] ?? '') == 'true') {
+					$this->UCP->FreePBX->Donotdisturb->setStatusByExtension($extension,"YES");
 				} else {
-					$this->UCP->FreePBX->Donotdisturb->setStatusByExtension($_POST['ext']);
+					$this->UCP->FreePBX->Donotdisturb->setStatusByExtension($extension);
 				}
 				return array("status" => true, "alert" => "success", "message" => _('Do Not Disturb Has Been Updated!'));
 				break;

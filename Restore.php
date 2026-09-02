@@ -11,14 +11,14 @@ class Restore Extends Base\RestoreBase{
 		foreach($dnd->getAllStatuses() as $key => $value){
 				$dnd->setStatusByExtension(str_replace('/DND/', '', $key));
 		}
-		foreach($configs['astdb'] as $key => $value){
+		foreach(($configs['astdb'] ?? []) as $key => $value){
 				$dnd->setStatusByExtension(str_replace('/DND/', '', $key), $value);
 		}
-		$this->importFeatureCodes($configs['features']);
+		$this->importFeatureCodes($configs['features'] ?? []);
 	}
 	public function processLegacy($pdo, $data, $tables, $unknownTables){
 		$dnd = $this->FreePBX->Donotdisturb;
-		$astdb = $data['astdb'];
+		$astdb = $data['astdb'] ?? [];
 		if (!isset($astdb['DND'])) {
 			return;
 		}
