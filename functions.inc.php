@@ -215,7 +215,7 @@ function donotdisturb_set($extension, $state = '') {
 	if ($amp_conf['USEDEVSTATE']) {
 		$devices = $astman->database_get("AMPUSER", $extension . "/device");
 
-		$device_arr = explode('&', $devices);
+		$device_arr = explode('&', (string) $devices);
 		foreach ($device_arr as $device) {
 			$ret = $astman->set_global($amp_conf['AST_FUNC_DEVICE_STATE'] . "(Custom:DEVDND$device)", $value_opt);
 		}
